@@ -54,6 +54,96 @@ causará a exceção mencionada acima;
 update mode: permite gravações e leituras."""
 
 
+""" File handles """
+
+
+""" Python assume que todo arquivo está oculto atrás de um
+ objeto de uma classe adequada."""
+
+
+""" Um objeto de classe adequada é criado quando você abre
+ o arquivo e o aniquila no momento de fechar."""
+
+
+""" Nota: você nunca usa construtores para dar vida a esses objetos.
+ A única maneira de obtê-los é invocando a função chamada open().
+ Se você quiser se livrar do objeto, você invoca o método chamado close()
+ """
+
+""" io.IOBase é uma classe base abstrata que representa a interface
+ comum para objetos de fluxo de entrada/saída.
+As classes derivadas de io.IOBase incluem io.TextIOBase (para manipulação
+ de fluxos de texto), io.BufferedIOBase (para operações de E/S em buffer)
+  e várias outras """
+
+
+""" todos os fluxos são divididos em fluxos de texto e binários."""
+
+
+""" Então surge um problema sutil. Em sistemas Unix/Linux, os finais de linha
+ são marcados por um único caractere denominado LF (código ASCII 10) designado 
+ em programas Python como \n.
+
+Outros sistemas operacionais, especialmente aqueles derivados do sistema
+pré-histórico CP/M (que também se aplica aos sistemas da família Windows)
+usam uma convenção diferente: o final da linha é marcado por um par de caracteres,
+CR e LF (códigos ASCII 13 e 10 ) que pode ser codificado como \r\n."""
+
+
+""" Tais características indesejáveis do programa, que impedem ou dificultam
+ a utilização do programa em diferentes ambientes, são chamadas de não
+  portabilidade.
+
+Da mesma forma, a característica do programa que permite a execução em
+ diferentes ambientes é chamada de portabilidade."""
+
+
+""" durante a leitura/gravação de linhas de/para o arquivo associado,
+nada de especial ocorre no ambiente Unix, mas quando as mesmas operações
+são executadas no ambiente Windows, ocorre um processo chamado tradução
+de caracteres de nova linha: quando você lê uma linha do arquivo, cada par
+de caracteres \r\n é substituído por um único caractere \n e vice-versa;
+durante operações de gravação, cada caractere \n é substituído por um par
+de caracteres \r\n;"""
+
+
+""" Opening the streams """
+
+
+# stream = open(file, mode = 'r', encoding = None)
+
+
+""" Nota: os argumentos mode e encoding podem ser omitidos – seus
+valores padrão são então assumidos. O modo de abertura padrão é lido em modo
+texto, enquanto a codificação padrão depende da plataforma utilizada."""
+
+
+""" 
+r open mode: read
+    o arquivo associado ao fluxo deve existir e ser legível
+    
+w open mode: write
+    o arquivo associado ao stream não precisa existir; se não existir será criado; 
+    se existir, será truncado para o comprimento zero (apagado)
+    
+a open mode: append
+    o arquivo associado ao stream não precisa existir; se não existir,
+    será criado; se existir, o cabeçote de gravação virtual será colocado no
+    final do arquivo (o conteúdo anterior do arquivo permanece intacto).
+    
+r+ open mode: read and update
+    o arquivo associado ao fluxo deve existir e ser gravável
+    
+w+ open mode: write and update
+    o arquivo associado ao stream não precisa existir; se não existir,
+    será criado; o conteúdo anterior do arquivo permanece intacto
+"""
+
+
+
+
+
+
 
 
 
