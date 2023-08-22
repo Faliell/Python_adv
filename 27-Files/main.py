@@ -140,8 +140,90 @@ w+ open mode: write and update
 """
 
 
+""" Selecting text and binary modes """
 
 
+""" 
+Se houver uma letra b no final da string de modo, significa que o fluxo deve ser aberto em modo binário.
+
+Se a string de modo terminar com a letra t, o fluxo será aberto em modo de texto. 
+"""
+
+
+""" 
+O modo de texto é o comportamento padrão assumido quando nenhum especificador de modo binário/texto é usado.
+
+A abertura bem-sucedida de um arquivo definirá a posição atual do arquivo (a cabeça virtual de
+ leitura/gravação) antes do primeiro byte do arquivo se o modo não for "a" e após o último byte do arquivo
+se o modo estiver definido como "a".
+"""
+
+""" 
+Text    mode	Binary mode	Description
+rt	    rb	    read
+wt	    wb	    write
+at	    ab	    append
+r+t 	r+b	    read and update
+w+t	    w+b	    write and update
+"""
+
+""" 
+EXTRA
+Você também pode abrir um arquivo para sua criação exclusiva. Você pode fazer isso usando o "x" open mode.
+ Se o arquivo já existir, a função open() gerará uma exceção.
+"""
+
+
+""" Opening the stream for the first time """
+
+# r ignora as \
+
+try:
+    stream = open(r"C:\Users\User\DesktopFile.txt", "rt")
+    # Processing goes here.
+    stream.close()
+except Exception as exc:
+    print("Cannot open the file:", exc)
+
+
+""" Pre-opened streams """
+
+
+""" Dissemos anteriormente que qualquer operação de stream deve ser precedida pela invocação da função open().
+ Existem três exceções bem definidas à regra.
+
+Quando nosso programa começa, os três streams já estão abertos e não requerem nenhum preparo extra.
+Além do mais, seu programa pode usar esses fluxos explicitamente se você importar o módulo sys 
+
+porque é onde é colocada a declaração dos três fluxos.
+
+Os nomes desses fluxos são: sys.stdin, sys.stdout e sys.stderr.
+"""
+
+
+"""
+Vamos analisá-los:
+
+sys.stdin
+stdin (como entrada padrão)
+    o fluxo stdin é normalmente associado ao teclado, pré-aberto para leitura e considerado a principal
+    fonte de dados para os programas em execução;
+    a conhecida função input() lê dados de stdin por padrão.
+
+sys.stdout
+stdout (como saída padrão)
+    o fluxo stdout é normalmente associado à tela, pré-aberta para escrita, considerada o alvo 
+    principal para saída de dados pelo programa em execução;
+    a conhecida função print() envia os dados para o fluxo stdout.
+
+sys.stderr
+stderr (como saída de erro padrão)
+    o fluxo stderr normalmente está associado à tela, pré-aberta para escrita, considerada o local principal
+    para onde o programa em execução deve enviar informações sobre os erros encontrados durante seu trabalho;
+    a separação do stdout (resultados úteis produzidos pelo programa) do stderr (mensagens de erro, inegavelmente
+    úteis, mas que não fornecem resultados) dá a possibilidade de redirecionar estes dois tipos de informação para
+    os diferentes alvos.
+"""
 
 
 
