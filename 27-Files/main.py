@@ -189,6 +189,12 @@ except Exception as exc:
 """ Pre-opened streams """
 
 
+""" 
+Em programação, "fluxos" referem-se a uma maneira de lidar com a entrada e saída de dados.
+São canais de comunicação através dos quais você pode enviar e receber informações.
+ """
+
+
 """ Dissemos anteriormente que qualquer operação de stream deve ser precedida pela invocação da função open().
  Existem três exceções bem definidas à regra.
 
@@ -226,6 +232,101 @@ stderr (como saída de erro padrão)
 """
 
 
+""" Closing streams """
 
 
+""" A última operação executada em um stream (isso não inclui os streams stdin, stdout e stderr,
+ que não exigem isso) deve ser "close".
 
+Essa ação é executada por um método invocado de dentro do objeto de fluxo aberto: stream.close()."""
+
+
+""" 
+a maioria dos desenvolvedores acredita que a função close() sempre é bem-sucedida e, portanto, 
+não há necessidade de verificar se ela executou sua tarefa corretamente.
+
+Esta crença é apenas parcialmente justificada. Se o fluxo foi aberto para escrita e depois uma série
+de operações de escrita foram executadas, pode acontecer que os dados enviados ao fluxo ainda não tenham
+sido transferidos para o dispositivo físico (devido a um mecanismo chamado cache ou buffer).
+
+Como o fechamento do fluxo força os buffers a liberá-los, pode ser que as liberações falhem e,
+portanto, o close() falhe também.
+"""
+
+
+""" Diagnosing stream problems """
+
+
+"""O objeto IOError é equipado com uma propriedade chamada errno (o nome vem da frase 
+número do erro) e você pode acessá-lo da seguinte forma:"""
+
+
+try:
+    # Some stream operations.
+    stream = open(r"C:\Users\User\DesktopFile.txt", "rt")
+except IOError as exc:
+    print(exc.errno)
+
+
+""" 
+Algumas constantes selecionadas úteis para detectar erros de stream:
+
+errno.EACCES → Permissão negada
+
+O erro ocorre quando você tenta, por exemplo, abrir um arquivo com o atributo somente leitura para escrita.
+
+errno.EBADF → Número de arquivo inválido
+
+O erro ocorre quando você tenta, por exemplo, operar com um fluxo não aberto.
+
+errno.EEXIST → Arquivo existe
+
+O erro ocorre quando você tenta, por exemplo, renomear um arquivo com seu nome anterior.
+
+errno.EFBIG → Arquivo muito grande
+
+O erro ocorre ao tentar criar um arquivo maior que o máximo permitido pelo sistema operacional.
+
+errno.EISDIR → É um diretório
+
+O erro ocorre quando você tenta tratar um nome de diretório como o nome de um arquivo comum.
+
+errno.EMFILE → Muitos arquivos abertos
+
+O erro ocorre quando você tenta abrir simultaneamente mais fluxos do que o aceitável para o seu sistema operacional.
+
+errno.ENOENT → Arquivo ou diretório inexistente
+
+O erro ocorre quando você tenta acessar um arquivo/diretório inexistente.
+
+errno.ENOSPC → Não há espaço restante no dispositivo
+
+O erro ocorre quando não há espaço livre na mídia.
+
+"""
+
+# Exemplo de tratamento de erros
+import errno
+
+try:
+    s = open("c:/users/user/Desktop/file.txt", "rt")
+    # Actual processing goes here.
+    s.close()
+except Exception as exc:
+    if exc.errno == errno.ENOENT:
+        print("The file doesn't exist.")
+    elif exc.errno == errno.EMFILE:
+        print("You've opened too many files.")
+    else:
+        print("The error number is:", exc.errno)
+
+
+# Simplificada com os
+from os import strerror
+
+try:
+    s = open("c:/users/user/Desktop/file.txt", "rt")
+    # Actual processing goes here.
+    s.close()
+except Exception as exc:
+    print("The file could not be opened:", strerror(exc.errno))
