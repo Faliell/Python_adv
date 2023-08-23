@@ -36,7 +36,7 @@ my_first_directory no diretório pai do diretório de trabalho atual;
 my_first_directory, que por sua vez está no diretório python no diretório raiz.
 """
 
-os.mkdir("my_first_directory")
+#os.mkdir("my_first_directory")
 print(os.listdir())
 
 
@@ -46,3 +46,57 @@ print(os.listdir())
 Se nenhum argumento for passado para ele, o diretório de trabalho atual será usado
 
 """
+
+
+""" Recursive directory creation """
+
+
+#os.makedirs("my_first_directory/my_second_directory")
+#os.chdir("my_first_directory")
+print(os.listdir())
+
+
+"""Where am I now? getcwd"""
+
+
+#os.makedirs("my_first_directory/my_second_directory")
+os.chdir("my_first_directory")
+print(os.getcwd())
+os.chdir("my_second_directory")
+print(os.getcwd())
+
+
+""" Deleting directories in Python rmdir removedirs"""
+
+
+# os.mkdir("my_first_directory")
+# print(os.listdir())
+# os.rmdir("my_first_directory")
+# print(os.listdir())
+#
+#
+# os.makedirs("my_first_directory/my_second_directory")
+# os.removedirs("my_first_directory/my_second_directory")
+# print(os.listdir())
+
+
+""" The system() function """
+
+
+returned_value = os.system("mkdir my_first_directory")
+print(returned_value)
+
+
+os.system("ls /Users/fabioschapowal/Desktop/Python/Python_adv/28-OsModule/my_first_directory")
+
+
+"""
+os.system("ls /caminho/para/seu/diretorio")  # No Linux/macOS
+# ou
+os.system("dir C:\\caminho\\para\\seu\\diretorio")  # No Windows """
+
+
+""" Dependendo do sistema, retorna um resultado diferente.
+No Windows, retorna o valor retornado pelo shell após a execução do comando
+fornecido, enquanto no Unix, retorna o status de saída do processo."""
+
