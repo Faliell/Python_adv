@@ -1,12 +1,12 @@
 """
 Cada módulo consiste em entidades (como um livro consiste em capítulos).
 Essas entidades podem ser funções, variáveis, constantes, classes e objetos.
-Se você sabe como acessar um determinado módulo, pode fazer uso de qualquer
+Se sabe como acessar um determinado módulo, pode usar qualquer
 uma das entidades que ele armazena.
 """
 
 
-### como importar
+""" como importar """
 # import math
 # import sys
 #
@@ -15,14 +15,14 @@ uma das entidades que ele armazena.
 
 
 
-# ### como chamar entidade
+""" como chamar entidade """
 # import math
 # print(math.sin(math.pi/2))
 
 
 
 
-# ### dois "sin"s diferente
+""" dois "sin"s diferente """
 # import math
 #
 # def sin(x):
@@ -37,7 +37,7 @@ uma das entidades que ele armazena.
 
 
 
-# ### modulo com entity/entities
+"""modulo com entity/entities """
 # from math import pi
 # print(pi)
 #
@@ -46,7 +46,7 @@ uma das entidades que ele armazena.
 
 
 
-# ### # sopreposicao de funcao
+""" sopreposicao de funcao """
 # from math import sin, pi
 #
 # print(sin(pi / 2))
@@ -62,13 +62,13 @@ uma das entidades que ele armazena.
 
 
 
-# ### import tudo -- you may not be able to avoid name conflicts.
+""" import tudo -- pode dar conflitos. """
 # from module import *
 
 
 
 
-# ###Aliasing
+""" Aliasing """
 # import math as m
 #
 # print(m.sin(m.pi / 2))
@@ -79,25 +79,27 @@ uma das entidades que ele armazena.
 
 
 
-########    Observacoes:  ###############
+""" Observacoes: """
 
-# #assim é melhor:
+""" assim é melhor: """
 # import mod2
 # import mod3
 # import mod4
 #
-# #do que:
+""" do que: """
 # import mod2, mod3, mod4
 
 
 
 
-# não é recomendada devido ao perigo de causar
-# conflitos com nomes derivados da importação do namespace do código:
+"""
+não é recomendada devido ao perigo de causar conflitos com nomes 
+derivados da importação do namespace do código:
 
-# from module import my_function, my_data
-#
-# result = my_function(my_data)
+from module import my_function, my_data
+
+result = my_function(my_data)
+"""
 
 
 
