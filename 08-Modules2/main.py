@@ -1,6 +1,14 @@
 import math
 
-# dir() ver entidades do modulo
+"""
+dir() ver entidades do modulo
+
+O módulo deve ter sido previamente importado como um todo (ou seja, usar a 
+import moduleinstrução - from modulenão é suficiente)
+ 
+Se o nome do módulo tiver um alias, você deverá usar o alias
+"""
+
 print(dir(math))
 
 # expoente
