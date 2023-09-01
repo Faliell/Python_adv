@@ -11,6 +11,9 @@ Se o nome do módulo tiver um alias, você deverá usar o alias
 
 print(dir(math))
 
+
+""" math """
+
 # expoente
 print(math.pow(2, 2))
 
@@ -23,39 +26,49 @@ print(math.floor(y))
 # remove parte decimal
 print(math.trunc(x))
 
+
+""" random """
+
 import random
 
 # de 0.0 a 0.999..
 print(random.random())
 
-### Seed
 
-"""O parâmetro a é a semente, que pode ser um número inteiro ou
- um objeto hashável (como uma string). Se a não for especificado ou for None,
-  a função utilizará um valor de semente baseado na hora atual do sistema,
-   tornando os números aleatórios diferentes a cada execução do programa."""
+"""
+Seed
 
-random.seed(42) # determina
+O parâmetro a é a semente, que pode ser um número inteiro ou
+um objeto hashável (como uma string). Se a não for especificado ou for None,
+a função utilizará um valor de semente baseado na hora atual do sistema,
+tornando os números aleatórios diferentes a cada execução do programa."""
 
-"""Agora, ao usar a função de geração de números aleatórios,
+random.seed(42) # determina o seed
+
+"""Ao usar a função de geração de números aleatórios,
 obteremos a mesma sequência a cada execução. """
+
 print(random.random())   # Saída: 0.6394267984578837
 print(random.random())   # Saída: 0.025010755222666936
 print(random.random())   # Saída: 0.27502931836911926
 
-random.seed()
+random.seed() #  define a semente com a hora atual
 
-### randrange, randint
-### random.randrange(start, stop, step)
-### 2ºparametro não inclusivo
+
+""" 
+randrange, randint
+random.randrange(start, stop, step)
+2ºparametro não inclusivo
+"""
 print(random.randrange(10))
 print(random.randrange(0, 5))
 print(random.randrange(0, 10, 2))
-### 2ºparametro inclusivo
+
+""" 2ºparametro inclusivo """
 print(random.randint(0, 1))
 
 
-### Choice, sample
+""" Choice, sample """
 
 from random import choice, sample
 
@@ -67,18 +80,21 @@ print(sample(my_list, 10))
 
 
 
-# Modulo Platform
+""" Modulo Platform """
 
 import platform
 
 platform.platform(aliased=False, terse=False)
 
-""" aliased → quando definido como True (ou qualquer valor diferente de zero)
+""" 
+aliased → quando definido como True (ou qualquer valor diferente de zero)
 pode fazer com que a função apresente os nomes alternativos da camada
 subjacente em vez dos comuns;
-    terse → quando definido como True (ou qualquer valor diferente de zero),
+
+terse → quando definido como True (ou qualquer valor diferente de zero),
 pode convencer a função a apresentar uma forma mais resumida do resultado
-(se possível)"""
+(se possível)
+"""
 
 print(platform.platform())
 print(platform.platform(1))
@@ -98,8 +114,10 @@ print(platform.python_implementation())
 ### Python's version
 print(platform.python_version_tuple())
 
-### modulos index
-### https://docs.python.org/3/py-modindex.html
+""" 
+modulos index
+https://docs.python.org/3/py-modindex.html
+"""
 
 
 
