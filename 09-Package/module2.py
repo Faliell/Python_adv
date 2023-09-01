@@ -1,5 +1,20 @@
 #!/usr/bin/env python3
 
+"""
+a linha que começa com #!tem muitos nomes - shabang , shebang , hashbang ,
+librabang ou hashpling. Do ponto de vista do Python, é apenas um comentário , pois começa com #.
+Para sistemas operacionais Unix e semelhantes a Unix (incluindo MacOS),
+essa linha instrui o sistema operacional sobre como executar o conteúdo do
+arquivo (em outras palavras, qual programa precisa ser iniciado para interpretar
+o texto). Em alguns ambientes (especialmente aqueles conectados a servidores web)
+a ausência dessa linha causará problemas;
+
+* uma string (talvez uma multilinha) colocada antes de qualquer instrução do
+módulo (incluindo importações) é chamada doc-string e deve explicar brevemente
+o propósito e o conteúdo do módulo;
+"""
+
+print(__name__)
 __counter = 0
 
 
