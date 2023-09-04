@@ -1,22 +1,48 @@
-# https: // pypi.org /
+"""
+https: // pypi.org /
 
-#pip3 --version or pip --version
-# pip help
-# pip help install
-# pip list
-# pip show pip
+pip significa “pip instala pacotes”
+"""
 
-# pip install --user pygame
-# pip show pygame
-# pip list
+"""
+pip3 --version or pip --version
+pip help
 
-# pip install -U package_name
-# pip install package_name==package_version
-# pip install pygame==1.9.2
+* pip help operation:
+pip help install
+pip list
 
-# pip uninstall package_name
-# pip uninstall pygame
+pip show pip
 
+quais pacotes são necessários para utilizar o pacote com sucesso ( Requires:)
+quais pacotes precisam que o pacote seja utilizado com sucesso ( Required-by:)
+
+- depreciado:
+pip search pip
+
++ --user instala somente para o usuário local, excluindo vai para todo sistema
+pip install --user pygame
+pip show pygame
+pip list
+
+*  -U significa update. 
+pip install -U package_name
+
+* versão exata
+pip install package_name==package_version
+pip install pygame==1.9.2
+
+pip uninstall package_name
+pip uninstall pygame
+
+"""
+
+""" 
+dependência é um fenômeno que aparece toda vez que você usa um software
+que depende de outro software . 
+
+O pip pode fazer tudo isso.
+"""
 
 import pygame
 
