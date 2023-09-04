@@ -2,7 +2,8 @@
 na pasta do pacote: __init__.py ."""
 
 from sys import path
-path.append('/Users/fabioschapowal/Desktop/Python/Python_adv/pacote/extra')
+path.append("/Users/fabioschapowal/Desktop/Python/Python_adv/extra")
+
 print(path)
 
 import extra.good.best.tau.funT
