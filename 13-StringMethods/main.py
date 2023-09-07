@@ -1,40 +1,40 @@
-""" -A string original da qual o método é invocado
- não é alterada de forma alguma – a imutabilidade de uma string
-  deve ser obedecida sem reservas;
-    -A string modificada (neste caso, em letras maiúsculas) é retornada
- como resultado – se você não a usar de forma alguma
-  (atribuí-la a uma variável ou passá-la para uma função/método)
-  ela desaparecerá sem deixar vestígios."""
+"""
+A string original da qual o método é invocado não é alterada de
+forma alguma – a imutabilidade de uma string deve ser obedecida sem reservas;
+A string modificada (neste caso, em letras maiúsculas) é retornada
+como resultado – se você não a usar de forma alguma (atribuí-la a uma variável ou
+passá-la para uma função/método) ela desaparecerá."""
 
-### capitalize()
+# ## capitalize()
 print("Alpha".capitalize())
 print('ALPHA'.capitalize())
 print(' Alpha'.capitalize())
 print('123'.capitalize())
 print("αβγδ".capitalize())
 
-###center():
+# ##center():
 print('[' + 'alpha'.center(10) + ']')
 print('[' + 'Beta'.center(2) + ']')
 print('[' + 'Beta'.center(4) + ']')
 print('[' + 'Beta'.center(6) + ']')
-#uso do caractere do segundo argumento, em vez de um espaço
+# uso do caractere do segundo argumento, em vez de um espaço
 print('[' + 'gamma'.center(20, '*') + ']')
 
-### endswith()
+# ## endswith() -retorna True/False
 t = "zeta"
 print(t.endswith("a"))
 print(t.endswith("A"))
 print(t.endswith("et"))
 print(t.endswith("eta"))
 
-### find()
+# ## find() - semelhante ao index(), é mais seguro - não gera erro para um
+# ## argumento que contém uma substring inexistente, retorna -1
 t = 'theta'
 print(t.find('eta'))
 print(t.find('et'))
 print(t.find('the'))
 print(t.find('ha'))
-#O segundo argumento especifica o índice no qual a pesquisa será iniciada
+# O segundo argumento especifica o índice no qual a pesquisa será iniciada
 print('kappa'.find('a', 2))
 """não use find() se você quiser apenas verificar se um único caractere 
 ocorre em uma string - o operador in será significativamente mais rápido."""
@@ -62,7 +62,8 @@ while fnd != -1:
 print('kappa'.find('a', 1, 4))
 print('kappa'.find('a', 2, 4))
 
-### isalnum()
+
+# ## isalnum() - alfa-numerico True/False
 print('lambda30'.isalnum())
 print('lambda'.isalnum())
 print('30'.isalnum())
@@ -79,92 +80,95 @@ print(t.isalnum())
 t = '20E1'
 print(t.isalnum())
 
-### isapha()
+
+# ## isalpha()
 print("Moooo".isalpha())
 print('Mu40'.isalpha())
 
 
-### isdigit()
+# ## isdigit() - apenas numeros
 print('2018'.isdigit())
+print('2018.1'.isdigit())
 print("Year2019".isdigit())
 
 
-### islower()
+# ## islower() - é uma variante de isalpha()– aceita apenas letras minúsculas.
 print("Moooo".islower())
 print('moooo'.islower())
 
 
-### isspace()
+# ## isspace()
 print(' \n '.isspace())
 print(" ".isspace())
 print("mooo mooo mooo".isspace())
 
 
-### isupper()
+# ## isupper() - a versão em maiúsculas de islower()
 print("Moooo".isupper())
 print('moooo'.isupper())
 print('MOOOO'.isupper())
 
 
-### join()
+# ## join() - todos os elementos da lista devem ser strings
 print(",".join(["omicron", "pi", "rho"]))
 
 
-### lower()
+# ## lower()
 print("SiGmA=60".lower())
 
 
-### lstrip()
+# ## lstrip() - (left) remove os caracteres especificados do começo da string
 print(" tau aa ".lstrip())
-# remove os caracteres especificados do começo da string
+# ## remove todos os caracteres listados em seu argumento, individualmente
 print("www.python.com".lstrip("w."))
-# se não achou, já para
-print("pythoninstitute.org".lstrip(".org"))
+# ## se não achou, já para
+print("gpython.org".lstrip(".org"))
 
 
-### replace()
+# ## replace() - substitui o primeiro argumento pelo segundo
 print("www.netacad.com".replace("netacad.com", "python.org"))
 print("This is it!".replace("is", "are"))
 print("Apple juice".replace("juice", ""))
+print("Apple juice".replace("", "juice"))
 # O terceiro argumento (um número), limita o número de substituições.
 print("This is it!".replace("is", "are", 1))
 print("This is it!".replace("is", "are", 2))
 
 
-### rfind()
-#começa pela direita
+# ## rfind() - começa pela direita
 print("tau tau tau".rfind("ta"))
 print("tau tau tau".rfind("ta", 9))
 print("tau tau tau".rfind("ta", 3, 9))
 
 
-### rstrip()
+# ## rstrip()
 print("[" + " upsilon ".rstrip() + "]")
 print("python.com".rstrip(".com"))
 
 
-### split()
+# ## split() - cria uma lista, as substrings são delimitadas por espaços em branco
 print("phi       chi\npsi".split())
+print("phi,chi,psi".split(","))
 
 
-### startswith()
+# ## startswith()
 print("omega".startswith("meg"))
 print("omega".startswith("om"))
 
 
-### strip()
+# ## strip() - cria uma nova string sem todos os espaços em branco iniciais e finais
 print("[" + "   aleph   ".strip() + "]")
 
 
-### swapcase()
+# ## swapcase() - caracteres minúsculos tornam-se maiúsculos e vice-versa
 print("I know that I know nothing.".swapcase())
 
 
-### title()
+# ## title()
 print("I know that I know nothing. Part 1.".title())
 
 
-### upper()
+# ## upper()
 print("I know that I know nothing. Part 2.".upper())
 
 
