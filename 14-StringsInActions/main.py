@@ -1,3 +1,7 @@
+""" A relação final entre strings é determinada comparando o primeiro
+caractere diferente em ambas as strings (tenha sempre em mente os pontos
+ de código ASCII/UNICODE)."""
+
 print('alpha' == 'alpha')
 print('alpha' != 'Alpha')
 
@@ -16,13 +20,15 @@ print('20' < '8')
 print('20' < '80')
 
 # Comparar strings com números geralmente é uma má ideia.
-# únicas comparações  == e !=
+# Únicas comparações  == e !=
 print('10' == 10)
 print('10' != 10)
 print('10' == 1)
 print('10' != 1)
-#print('10' > 10)
+# print('10' > 10) # error
 
+
+""" Ordenação sorted() sort()"""
 
 # Sorted() - retorna nova lista, não altera original
 
@@ -42,7 +48,7 @@ second_greek.sort()
 print(second_greek)
 
 
-#conversão
+# conversão
 
 itg = 13
 flt = 1.3
@@ -51,12 +57,13 @@ sf = str(flt)
 
 print(si + ' ' + sf)
 
+"""  é possível somente quando a string representa um número válido."""
 # reverso:
 si = '13'
 sf = '1.3'
 itg = int(si)
 flt = float(sf)
-#errado = int('1.3')
+# errado = int('1.3')
 print(itg + flt)
 
 
