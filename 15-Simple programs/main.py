@@ -38,7 +38,7 @@ try:
         total += float(substr)
     print("The total is:", total)
 except:
-    print(substr, "is not a number.") #corrigir erro
+    print(substr, "is not a number.")  # corrigir erro
 
 
 
@@ -51,7 +51,7 @@ conversão de letras (A=10, B=11, ..., Z=35).
 Verificar se o IBAN resultante é divisível por 97."""
 
 iban = input("Enter IBAN, please: ")
-iban = iban.replace(' ','')
+iban = iban.replace(' ', '')
 
 if not iban.isalnum():
     print("You have entered invalid characters.")
