@@ -1,6 +1,8 @@
-"""Quando Python acha um erro:
+"""
+Quando Python acha um erro:
 -ele interrompe o seu programa;
--ele cria um tipo especial de dados, chamado exceção."""
+-ele cria um tipo especial de dados, chamado exceção.
+"""
 
 # Momento que chama except
 try:
@@ -37,9 +39,31 @@ print("3")
 #     print("some")
 ###########################################
 
-"""O Python 3 define 63 exceções internas e todas elas formam uma hierarquia
+"""
+as except ramificações são pesquisadas na mesma ordem em que aparecem no código;
+ 
+você não deve usar mais de um branch exceto com um determinado nome de exceção;
+
+o número de except ramificações diferentes é arbitrário - a única condição
+é que se você usar try, você deve colocar pelo menos uma except (nomeada ou não)
+depois dela;
+
+a except palavra-chave não deve ser usada sem um precedente try;
+
+se alguma das except ramificações for executada, nenhuma outra ramificação
+será visitada;
+
+se nenhuma das except ramificações especificadas corresponder à exceção
+levantada, a exceção permanecerá sem tratamento;
+
+se except existir uma ramificação sem nome (uma sem nome de exceção), ela
+deverá ser especificada como a última.
+"""
+
+
+""" O Python 3 define 63 exceções internas e todas elas formam uma hierarquia
 em forma de árvore, embora a árvore seja um pouco estranha,
-pois sua raiz está localizada no topo."""
+pois sua raiz está localizada no topo. """
 
 def treeClass(cls, ind=0):
     print('-' * ind, cls.__name__)
