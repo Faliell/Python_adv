@@ -60,10 +60,13 @@ se except existir uma ramificação sem nome (uma sem nome de exceção), ela
 deverá ser especificada como a última.
 """
 
+#######################################################
+
 
 """ O Python 3 define 63 exceções internas e todas elas formam uma hierarquia
 em forma de árvore, embora a árvore seja um pouco estranha,
 pois sua raiz está localizada no topo. """
+
 
 def treeClass(cls, ind=0):
     print('-' * ind, cls.__name__)
@@ -71,10 +74,21 @@ def treeClass(cls, ind=0):
     for i in cls.__subclasses__():
         treeClass(i, ind + 3)
 
+
 print("Hierarchy for Built-in exceptions is : ")
-#treeClass(BaseException)
+# treeClass(BaseException)
 
 
+####################################################
+
+""" 
+cada exceção levantada cai no primeiro ramo correspondente ;
+o ramo correspondente não precisa especificar exatamente a mesma exceção 
+- é suficiente que a exceção seja mais geral (mais abstrata) do que a levantada.
+
+A ordem dos ramos é importante!
+Não coloque exceções mais gerais antes das mais concretas;
+"""
 
 try:
     y = 1 / 0
@@ -94,10 +108,29 @@ except ZeroDivisionError:
 
 print("THE END.")
 
-### the order of the branches matters!
+
+################################################
 
 
-### raise - força o erro
+""" Se quiser tratar duas ou mais exceções da mesma maneira,
+você pode usar a seguinte sintaxe:"""
+
+try:
+    print(1/0)
+except (ZeroDivisionError, ValueError):
+    print("Erro: Houve um problema com a operação.")
+
+
+##############################################
+
+""" 
+raise - força o erro
+
+Apenas raise: este tipo de instrução de raise pode ser usado apenas dentro
+ da ramificação except
+"""
+
+
 def bad_fun(n):
     raise ZeroDivisionError
 
@@ -110,8 +143,7 @@ print("THE END.")
 
 
 
-""" Apenas raise: este tipo de instrução de raise pode ser usado apenas dentro
- da ramificação except """
+
 
 def bad_fun(n):
     try:
