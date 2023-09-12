@@ -124,12 +124,17 @@ except (ZeroDivisionError, ValueError):
 ##############################################
 
 """ 
-raise - força o erro
+raise - força o erro - ex: raise ZeroDivisionError
 
 Apenas raise: este tipo de instrução de raise pode ser usado apenas dentro
  da ramificação except
 """
 
+"""
+Se uma exceção for levantada dentro de uma função , ela poderá ser tratada:
+-dentro da função;
+-fora da função;
+"""
 
 def bad_fun(n):
     raise ZeroDivisionError
@@ -143,7 +148,12 @@ print("THE END.")
 
 
 
+"""
+O ZeroDivisionError é gerado duas vezes:
 
+primeiro, dentro da try parte do código (isso é causado pela divisão zero real)
+segundo, dentro da except peça pelas raise instruções.
+"""
 
 def bad_fun(n):
     try:
@@ -151,6 +161,7 @@ def bad_fun(n):
     except:
         print("I did it again!")
         raise
+
 
 try:
     bad_fun(0)
@@ -161,13 +172,14 @@ print("THE END.")
 
 
 
-### assert
+""" assert """
 
-"""1- Avalia a expressão;
+"""
+1- Avalia a expressão;
 2- se a expressão for avaliada como True, ou um valor numérico diferente de zero,
 ou uma string não vazia, ou qualquer outro valor diferente de None,
 ela não fará mais nada;
--3caso contrário, automaticamente e imediatamente gera uma exceção
+3-caso contrário, automaticamente e imediatamente gera uma exceção
 chamada AssertionError (neste caso, dizemos que a asserção falhou)"""
 
 import math
