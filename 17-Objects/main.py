@@ -1,8 +1,3 @@
-class TheSimplestClass:
-    pass
-
-my_first_object = TheSimplestClass()
-
 """O ato de criar um objeto da classe selecionada também é chamado
  de instanciação (já que o objeto se torna uma instância da classe)."""
 
@@ -25,3 +20,20 @@ my_first_object = TheSimplestClass()
 um nome que os identifica e permite distingui-los;
 um conjunto de propriedades (o conjunto pode estar vazio)
 um conjunto de métodos (também pode estar vazio)"""
+
+
+"""
+Há uma dica (embora nem sempre funcione) que pode ajudá-lo a identificar
+qualquer uma das três esferas acima. Sempre que você descreve um objeto e usa:
+
+um substantivo – você provavelmente define o nome do objeto;
+um adjetivo – você provavelmente define a propriedade do objeto;
+um verbo – você provavelmente define a atividade do objeto.
+"""
+
+
+class TheSimplestClass:
+    pass
+
+
+my_first_object = TheSimplestClass()
