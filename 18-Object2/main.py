@@ -1,9 +1,9 @@
 """Uma stack é um objeto projetado para armazenar dados usando o
-modelo LIFO. A pilha geralmente realiza pelo menos duas operações,
- denominadas push() e pop()."""
+modelo LIFO - Last In - First Out. A pilha geralmente realiza pelo menos duas
+ operações, denominadas push() e pop()."""
 
 
-### procedual:
+# ## procedual:
 
 stack = []
 
@@ -17,6 +17,7 @@ def pop():
     del stack[-1]
     return val
 
+
 push(3)
 push(2)
 push(1)
@@ -27,10 +28,9 @@ print(pop())
 
 ##############################################
 
-### object:
-
-### o nome do construtor é sempre __init__
-### tem que ter pelo menos um parâmetro (geralmente é chamado de self)
+"""object:
+o nome do construtor é sempre __init__
+tem que ter pelo menos um parâmetro (geralmente é chamado de self)"""
 
 
 class Stack:  # Defining the Stack class.
@@ -41,7 +41,10 @@ class Stack:  # Defining the Stack class.
 stack_object = Stack()  # Instantiating the object.
 
 
-###
+""" nome começando com dois sublinhados (__), ele se torna privado
+É assim que o Python implementa o conceito de encapsulamento . """
+
+
 class Stack:
     def __init__(self):
         self.stack_list = []
@@ -53,17 +56,19 @@ print(len(stack_object.stack_list))
 
 ##################################################
 
-### com as funções:
+""" Ser acessíveis a todos os usuários da classe Esse componente é chamado
+public , portanto você não pode começar seu nome com dois (ou mais) sublinhados.
+Há mais um requisito: o nome não deve ter mais do que um sublinhado final ."""
+
+# ## com as funções:
 
 
 class Stack:
     def __init__(self):
         self.__stack_list = []
 
-
     def push(self, val):
         self.__stack_list.append(val)
-
 
     def pop(self):
         val = self.__stack_list[-1]
@@ -81,8 +86,24 @@ print(stack_object.pop())
 print(stack_object.pop())
 print(stack_object.pop())
 
+""" Aqui, ambas as funções possuem um parâmetro nomeado self na primeira posição
+da lista de parâmetros.
+Todos os métodos devem ter este parâmetro. Ele desempenha a mesma função que
+o primeiro parâmetro do construtor.
+Permite que o método acesse entidades (propriedades e atividades/métodos)
+realizadas pelo objeto real . Você não pode omitir isso. Cada vez que Python
+invoca um método, ele envia implicitamente o objeto atual como primeiro argumento.
+"""
 
-### Desafio: tente prever a saída
+
+""" Existem duas pilhas criadas a partir da mesma classe base .
+Elas trabalham de forma independente . Você pode fazer mais deles se quiser."""
+
+stack_object_1 = Stack()
+stack_object_2 = Stack()
+
+
+# ## Desafio: tente prever a saída
 
 class Stack:
     def __init__(self):
