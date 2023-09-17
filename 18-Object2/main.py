@@ -132,19 +132,29 @@ print(funny_stack.pop())
 ###############################
 
 
-### Super Class
+"""Super Class"""
+
 
 class AddingStack(Stack):
     pass
 
 
+"""Python força você a invocar explicitamente o construtor de uma superclasse"""
 
-### Python força você a invocar explicitamente o construtor de uma superclasse
 
 class AddingStack(Stack):
     def __init__(self):
         Stack.__init__(self)
         self.__sum = 0
+
+
+##############################################
+
+
+""" invocar qualquer método (incluindo construtores) de fora da classe nunca
+exige que você coloque o "self" argumento na lista de argumentos - invocar um
+método de dentro da classe exige o uso explícito do "self" argumento e deve
+ser colocado em primeiro lugar na lista. """
 
 
 class Stack:
@@ -160,7 +170,48 @@ class Stack:
         return val
 
 
-### final:
+class AddingStack(Stack):
+    def __init__(self):
+        Stack.__init__(self)
+        self.__sum = 0
+
+
+#######################################################
+
+""" 
+Modificar método:
+
+def push(self, val):
+    self.__sum += val
+    Stack.push(self, val)
+    
+    
+- temos que especificar o nome da superclasse; isso é necessário para
+indicar claramente a classe que contém o método, para evitar confundi-lo
+com qualquer outra função de mesmo nome;
+
+- temos que especificar o objeto de destino e passá-lo como o primeiro
+argumento (ele não é adicionado implicitamente à invocação neste contexto).
+
+
+Obter valores dos atributos:
+
+def get_sum(self):
+    return self.__sum
+
+"""
+
+class Stack:
+    def __init__(self):
+        self.__stack_list = []
+
+    def push(self, val):
+        self.__stack_list.append(val)
+
+    def pop(self):
+        val = self.__stack_list[-1]
+        del self.__stack_list[-1]
+        return val
 
 
 class AddingStack(Stack):

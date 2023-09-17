@@ -19,13 +19,36 @@ example_object_2.set_second(3)
 example_object_3 = ExampleClass(4)
 example_object_3.third = 5  # acrescenta
 
-### __dict__
+
+"""
+Os objetos Python, quando criados, são dotados de um pequeno conjunto de
+propriedades e métodos predefinidos . Cada objeto os possui. Uma delas é uma
+variável chamada __dict__(é um dicionário).
+"""
+
 print(example_object_1.__dict__)
 print(example_object_2.__dict__)
 print(example_object_3.__dict__)
 
 
-### privado
+"""
+modificar uma variável de instância de qualquer objeto não tem impacto em todos
+os objetos restantes .
+"""
+
+
+"""
+Privado
+
+Quando o Python vê que você deseja adicionar uma variável de instância 
+ a um objeto e você vai fazer isso dentro de qualquer um dos métodos do objeto,
+ ele distorce a operação da seguinte maneira:
+
+-coloca um nome de classe antes do seu nome.
+-ele coloca um sublinhado adicional no início.
+
+É por isso que __first se torna _ExampleClass__first."""
+
 
 class ExampleClass:
     def __init__(self, val=1):
@@ -47,22 +70,21 @@ print(example_object_1.__dict__)
 print(example_object_2.__dict__)
 print(example_object_3.__dict__)
 
-"""Quando o Python vê que você deseja adicionar uma variável de instância 
- a um objeto e você vai fazer isso dentro de qualquer um dos métodos do objeto,
- ele distorce a operação da seguinte maneira:
 
--coloca um nome de classe antes do seu nome.
--ele coloca um sublinhado adicional no início.
-
-É por isso que __first se torna _ExampleClass__first."""
-
-### acesso:
+# ## acesso:
 print(example_object_1._ExampleClass__first)
 
-### Váriavels de classes
 
-"""Uma variável de classe é uma propriedade que existe em apenas uma cópia
- e é armazenada fora de qualquer objeto."""
+""" A confusão não funcionará se você adicionar uma variável de instância
+privada fora do código da classe"""
+
+
+"""
+Váriavels de classes
+
+Uma variável de classe é uma propriedade que existe em apenas uma cópia
+e é armazenada fora de qualquer objeto.
+"""
 
 
 class ExampleClass:
@@ -82,10 +104,21 @@ print(example_object_2.__dict__, example_object_2.counter)
 print(example_object_3.__dict__, example_object_3.counter)
 
 
-###
+"""
+- variáveis de classe não são mostradas em um objeto__dict__
+
+- uma variável de classe sempre apresenta o mesmo valor em todas as instâncias
+de classe (objetos)
+"""
+
+
+"""Alterar o nome de uma variável de classe, "__", tem os mesmos efeitos daqueles
+com os quais você já está familiarizado."""
+
 
 class ExampleClass:
     __counter = 0
+
     def __init__(self, val = 1):
         self.__first = val
         ExampleClass.__counter += 1
