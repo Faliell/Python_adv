@@ -135,8 +135,15 @@ print(example_object_3.__dict__, example_object_3._ExampleClass__counter)
 
 
 ### __dict__ para classe e objeto
+
+""" 
+Alterar a atribuição para "self.varia = val" criaria uma variável de instância com o
+mesmo nome da classe;
+Alterar a atribuição para "varia = val" operaria na variável local de um método;
+"""
 class ExampleClass:
     varia = 1
+
     def __init__(self, val):
         ExampleClass.varia = val
 
@@ -145,12 +152,16 @@ print(ExampleClass.__dict__)
 example_object = ExampleClass(2)
 
 print(ExampleClass.__dict__)
+
+"""
+Observe que o objeto __dict__ está vazio - o objeto não possui variáveis de instância.
+"""
 print(example_object.__dict__)
 
 
-
-"""você não pode esperar que todos os objetos da mesma classe tenham os mesmos
+""" Você não pode esperar que todos os objetos da mesma classe tenham os mesmos
  conjuntos de propriedades."""
+
 
 class ExampleClass:
     def __init__(self, val):
@@ -166,7 +177,8 @@ print(example_object.a)
 # print(example_object.b)  #erro
 
 
-### try except
+"""A instrução try-except oferece a oportunidade de evitar problemas com propriedades
+inexistentes."""
 
 class ExampleClass:
     def __init__(self, val):
@@ -184,13 +196,16 @@ try:
 except AttributeError:
     pass
 
-"""Python fornece uma função que é capaz de verificar com segurança se algum
+
+"""
+Python fornece uma função que é capaz de verificar com segurança se algum
 objeto/classe contém uma propriedade especificada. A função é denominada hasattr
 e espera que dois argumentos sejam passados para ela:
 
-a classe ou o objeto que está sendo verificado;
-o nome da propriedade cuja existência deve ser informada 
-(nota: deve ser uma string contendo o nome do atributo, não apenas o nome)"""
+- a classe ou o objeto que está sendo verificado;
+- o nome da propriedade cuja existência deve ser informada 
+ (nota: deve ser uma string contendo o nome do atributo, não apenas o nome)
+"""
 
 
 class ExampleClass:
@@ -207,7 +222,9 @@ print(example_object.a)
 if hasattr(example_object, 'b'):
     print(example_object.b)
 
-### Com classe:
+
+"""também pode operar em classes."""
+
 
 class ExampleClass:
     attr = 1
@@ -217,7 +234,7 @@ print(hasattr(ExampleClass, 'attr'))
 print(hasattr(ExampleClass, 'prop'))
 
 
-### outro exemplo:
+"""outro exemplo:"""
 
 class ExampleClass:
     a = 1
