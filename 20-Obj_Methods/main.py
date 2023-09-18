@@ -1,6 +1,13 @@
-"""Um método é obrigado a ter pelo menos um parâmetro (não existem
- métodos sem parâmetros – um método pode ser invocado sem um argumento,
- mas não declarado sem parâmetros)."""
+"""
+ Um método é obrigado a ter pelo menos um parâmetro (não existem
+ métodos sem parâmetros. Um método pode ser invocado sem um argumento,
+ mas não declarado sem parâmetros).
+
+ O primeiro (ou único) parâmetro é geralmente denominado self.
+
+ Se for invocar um método, não deve passar o argumento para o
+ self - parâmetro - o Python irá configurá-lo para você.
+ """
 
 
 class Classy:
@@ -12,7 +19,10 @@ obj = Classy()
 obj.method()
 
 
-### Mais de um parametro
+"""Se quiser que o método aceite parâmetros diferentes de self, você deve:
+
+- coloque-os depois selfna definição do método;
+- entregá-los durante a invocação sem especificar self"""
 
 class Classy:
     def method(self, par):
@@ -28,8 +38,10 @@ obj.method(3)
 """O parâmetro self é usado para obter acesso às variáveis de instância
  e classe do objeto."""
 
+
 class Classy:
     varia = 2
+
     def method(self):
         print(self.varia, self.var)
 
@@ -44,6 +56,7 @@ obj.method()
 
 
 class Classy:
+
     def other(self):
         print("other")
 
@@ -56,11 +69,17 @@ obj = Classy()
 obj.method()
 
 
-"""Se você nomear um método como este: __init__,
- não será um método regular – será um construtor.
+"""
+Se você nomear um método como este: __init__,
+não será um método regular – será um construtor.
 
 Se uma classe tiver um construtor, ele será invocado automática
- e implicitamente quando o objeto da classe for instanciado."""
+e implicitamente quando o objeto da classe for instanciado.
+ 
+- é obrigado a ter o self parâmetro
+- pode (mas não precisa) ter mais parâmetros
+- pode ser usado para configurar o objeto
+"""
 
 
 class Classy:
@@ -79,7 +98,8 @@ print(obj_1.var)
 - não pode ser invocado diretamente do objeto ou de dentro da classe """
 
 
-### Funciona como as funções:
+"""Como __init__é um método, e um método é uma função, você pode fazer os
+mesmos truques com construtores/métodos que faria com funções comuns."""
 
 
 class Classy:
@@ -116,7 +136,11 @@ except:
 obj._Classy__hidden()
 
 
-### __dict__
+"""
+Cada classe Python e cada objeto Python são pré-equipados com um conjunto
+de atributos úteis.
+__dict__
+"""
 
 
 class Classy:
@@ -138,10 +162,17 @@ print(obj.__dict__)
 print(Classy.__dict__)
 
 
-"""Outra propriedade interna: __name__, que é uma string.
-    Existe apenas dentro das classes.
-    Para encontrar a classe de um determinado objeto,
-    você pode usar uma função chamada type()
+"""
+Outra propriedade interna: __name__, que é uma string.
+Existe apenas dentro das classes.
+Para encontrar a classe de um determinado objeto,
+você pode usar uma função chamada type()
+
+Observe que uma declaração como esta:
+
+print(obj.__name__)
+
+causará um erro.
 """
 
 
@@ -155,8 +186,9 @@ print(type(obj).__name__)
 
 
 """
-__module__, armazena o nome do módulo que contém a definição da classe
-qualquer módulo chamado __main__ na verdade não é um módulo,
+__module__, armazena o nome do módulo que contém a definição da classe.
+
+Qualquer módulo chamado __main__ na verdade não é um módulo,
 mas o arquivo que está sendo executado no momento.
 """
 
@@ -200,8 +232,12 @@ printBases(Sub)
 
 print(Sub.__bases__)
 
-"""Observação: uma classe sem superclasses explícitas aponta para um objeto
- (uma classe Python predefinida) como seu ancestral direto."""
+"""
+Observação: uma classe sem superclasses explícitas aponta para um objeto
+ (uma classe Python predefinida) como seu ancestral direto.
+ 
+Nota: apenas as classes possuem este atributo - os objetos não. 
+ """
 
 
 
