@@ -9,6 +9,11 @@ importantes atividades específicas para muitas linguagens OOP. São eles:
   em tempo de execução."""
 
 
+""" A função nomeada incIntsI() obtém um objeto de qualquer classe, verifica
+seu conteúdo para encontrar todos os atributos inteiros com nomes começando
+com i e os incrementa em 1."""
+
+
 class MyClass:
     pass
 
@@ -35,7 +40,8 @@ incIntsI(obj)
 print(obj.__dict__)
 
 
-"""1. Um método é uma função embutida dentro de uma classe.
+"""
+1. Um método é uma função embutida dentro de uma classe.
 O primeiro (ou único) parâmetro de cada método geralmente é denominado self,
 que é projetado para identificar o objeto para o qual o método é invocado
 para acessar as propriedades do objeto ou invocar seus métodos.
@@ -49,4 +55,5 @@ ela não pode retornar nenhum valor e não pode ser invocada diretamente.
 que armazena o nome da classe. Além disso, uma propriedade denominada
 __module__ armazena o nome do módulo no qual a classe foi declarada,
 enquanto a propriedade denominada __bases__ é uma tupla contendo as superclasses
-de uma classe."""
+de uma classe.
+"""
