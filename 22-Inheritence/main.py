@@ -1,4 +1,14 @@
-""" Defirnir __str__"""
+""" Defirnir __str__
+
+Quando Python precisa que qualquer classe/objeto seja apresentado como uma
+string (colocar um objeto como argumento no print(), a invocação da função se
+ajusta a esta condição), ele tenta invocar um método nomeado __str__() a partir
+do objeto e usar a string que ele retorna.
+
+O método padrão __str__() retorna a string anterior - feia e pouco informativa.
+Você pode alterá-lo apenas definindo seu próprio método de nome .
+
+"""
 
 
 class Star:
@@ -61,8 +71,16 @@ for cls1 in [Vehicle, LandVehicle, TrackedVehicle]:
     print()
 
 
-"""isinstance()
+"""obs: cada classe é considerada uma subclasse de si mesma ."""
+
+
+"""
+isinstance()
 isinstance(objectName, ClassName)
+
+Os objetos da subclasse podem fazer o mesmo que os objetos derivados
+da superclasse, portanto, é uma instância de sua classe inicial e de qualquer
+uma de suas classes iniciais. suas superclasses.
 """
 
 
@@ -148,7 +166,7 @@ print(obj)
    da superclasse usando apenas um argumento."""
 
 
-class Super:
+class Super1:
     def __init__(self, name):
         self.name = name
 
@@ -156,7 +174,7 @@ class Super:
         return "My name is " + self.name + "."
 
 
-class Sub(Super):
+class Sub(Super1):
     def __init__(self, name):
         super().__init__(name)
 
@@ -196,6 +214,8 @@ class Sub(Super1):
 
 
 obj = Sub()
+print(obj.subVar)
+print(obj.supVar)
 
 
 """Quando você tenta acessar a entidade de qualquer objeto,
