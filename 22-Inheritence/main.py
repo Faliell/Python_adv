@@ -268,7 +268,12 @@ print(obj.variable_2, obj.var_2, obj.fun_2())
 print(obj.variable_3, obj.var_3, obj.fun_3())
 
 
-"""Herança múltipla"""
+"""
+Herança múltipla
+
+Essa herança é apresentada como uma lista de superclasses separadas por
+vírgulas, colocadas entre parênteses após o novo nome da classe
+"""
 
 
 class SuperA:
@@ -295,7 +300,13 @@ print(obj.var_a, obj.fun_a())
 print(obj.var_b, obj.fun_b())
 
 
-"""overriding"""
+"""
+Overriding
+
+A entidade definida posteriormente (no sentido de herança) substitui
+a mesma entidade definida anteriormente.
+Ou Python procura uma entidade de baixo para cima.(outra definição)
+"""
 
 
 class Level1:
@@ -321,7 +332,10 @@ obj = Level3()
 print(obj.var, obj.fun())
 
 
-"""Podemos dizer que Python procura por componentes de objeto na seguinte ordem:
+"""
+Quando a classe herda bens de duas superclasses
+
+Podemos dizer que Python procura por componentes de objeto na seguinte ordem:
 
 -dentro do próprio objeto;
 -em suas superclasses, de baixo para cima;
@@ -352,11 +366,15 @@ obj = Sub()
 print(obj.var, obj.var_left, obj.var_right, obj.fun())
 
 
-"""a situação em que a subclasse é capaz de modificar o comportamento
- de sua superclasse (como no exemplo) é chamada de polimorfismo."""
+"""
+Polimorfismo
 
-"""O método, redefinido em qualquer uma das superclasses, alterando
- assim o comportamento da superclasse, é denominado virtual."""
+A situação em que a subclasse é capaz de modificar o comportamento
+de sua superclasse (como no exemplo) é chamada de polimorfismo.
+
+O método, redefinido em qualquer uma das superclasses, alterando
+assim o comportamento da superclasse, é denominado virtual.
+"""
 
 class One:
     def do_it(self):
