@@ -1,6 +1,16 @@
+"""
+- um veículo rastreado faz uma curva parando e se movendo em uma de suas
+trilhas (isso é feito pelo método control_track(), que será implementado
+posteriormente)
+- um veículo com rodas gira quando suas rodas dianteiras giram (isso é feito
+pelo método turn_front_wheels())
+- o método turn()  utiliza o método adequado para cada veículo específico.
+"""
+
 import time
 
 """Sem herança"""
+
 class TrackedVehicle:
     def control_track(left, stop):
         pass
