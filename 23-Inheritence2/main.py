@@ -62,7 +62,20 @@ class WheeledVehicle(Vehicle):
         turn_front_wheels(left, on)
 
 
-"""Composição é o processo de compor um objeto usando outros objetos diferentes."""
+"""
+Composição
+
+Composição é o processo de compor um objeto usando outros objetos diferentes.
+
+- A herança estende os recursos de uma classe adicionando novos componentes
+e modificando os existentes; em outras palavras, a receita completa está
+contida na própria classe e em todos os seus ancestrais; o objeto pega todos
+os pertences da classe e faz uso deles;
+
+- A composição projeta uma classe como um contêiner capaz de armazenar e usar
+outros objetos (derivados de outras classes) onde cada um dos objetos implementa
+uma parte do comportamento desejado da classe.
+"""
 
 
 class Tracks:
@@ -166,7 +179,7 @@ class Middle(Top):
         print("middle")
 
 
-class Bottom(Middle, Top):
+class Bottom(Middle, Top):  # nesta linha
     def m_bottom(self):
         print("bottom")
 
@@ -240,7 +253,8 @@ class MiddleRight(Top):
     def m_middle(self):
         print("middle_right")
 
-#class Bottom(MiddleRight, MiddleLeft):
+
+# class Bottom(MiddleRight, MiddleLeft):
 class Bottom(MiddleLeft, MiddleRight):
     def m_bottom(self):
         print("bottom")
