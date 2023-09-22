@@ -1,4 +1,7 @@
-""" else """
+""" Else
+
+Uma possível ramificação adicional que pode ser colocada dentro  do bloco try-except
+"""
 
 
 def reciprocal(n):
@@ -36,7 +39,14 @@ print(reciprocal(2))
 print(reciprocal(0))
 
 
-""" As exceções são classes """
+""" 
+As exceções são classes
+
+A exceptinstrução é estendida e contém uma frase adicional começando com
+a palavra-chave "as", seguida por um identificador. O identificador foi projetado
+para capturar o objeto de exceção para que você possa analisar sua natureza e
+tirar conclusões adequadas. 
+"""
 
 
 try:
@@ -47,7 +57,9 @@ except Exception as e:
 
 
 """ Ver a árvore de excecões"""
-def print_exception_tree(thisclass, nest = 0):
+
+
+def print_exception_tree(thisclass, nest=0):
     if nest > 1:
         print("   |" * (nest - 1), end="")
     if nest > 0:
