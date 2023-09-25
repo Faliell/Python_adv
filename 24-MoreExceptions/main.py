@@ -1,6 +1,9 @@
 """ Else
 
 Uma possível ramificação adicional que pode ser colocada dentro  do bloco try-except
+
+A ramificação "else:" da instrução "try" é executada quando não houve exceção durante
+a execução do bloco "try:".
 """
 
 
@@ -142,11 +145,10 @@ for mode in [False, True]:
         print('Original division by zero')
 
 
-""" construir sua própria estrutura de exceção"""
+""" Construir sua própria estrutura de exceção """
 
 
 class PizzaError(Exception):
-    #   def __init__(self, pizza='uknown', message=''):
     def __init__(self, pizza, message):
         Exception.__init__(self, message)
         self.pizza = pizza
@@ -172,3 +174,39 @@ for (pz, ch) in [('calzone', 0), ('margherita', 110), ('mafia', 20)]:
         print(tmce, ':', tmce.cheese)
     except PizzaError as pe:
         print(pe, ':', pe.pizza)
+
+
+""" Definindo os valores padrão para todos os parâmetros do construtor """
+
+
+class PizzaError(Exception):
+    def __init__(self, pizza='unknown', message=''):
+        Exception.__init__(self, message)
+        self.pizza = pizza
+
+
+class TooMuchCheeseError(PizzaError):
+    def __init__(self, pizza='uknown', cheese='>100', message=''):
+        PizzaError.__init__(self, pizza, message)
+        self.cheese = cheese
+
+
+def make_pizza(pizza, cheese):
+    if pizza not in ['margherita', 'capricciosa', 'calzone']:
+        raise PizzaError
+    if cheese > 100:
+        raise TooMuchCheeseError
+    print("Pizza ready!")
+
+
+for (pz, ch) in [('calzone', 0), ('margherita', 110), ('mafia', 20)]:
+    try:
+        make_pizza(pz, ch)
+    except TooMuchCheeseError as tmce:
+        print(tmce, ':', tmce.cheese)
+    except PizzaError as pe:
+        print(pe, ':', pe.pizza)
+
+
+
+
