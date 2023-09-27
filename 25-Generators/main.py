@@ -12,8 +12,8 @@ for i in range(5):
 
 
 """ O protocolo iterador é uma maneira pela qual um objeto deve se comportar
- de acordo com as regras impostas pelo contexto das instruções for e in.
-  Um objeto em conformidade com o protocolo do iterador é chamado de iterador."""
+de acordo com as regras impostas pelo contexto das instruções for e in.
+Um objeto em conformidade com o protocolo do iterador é chamado de iterador."""
 
 
 """ Um iterador deve fornecer dois métodos:
@@ -78,7 +78,7 @@ def fun(n):
 
 
 """ Todos os valores das variáveis são congelados, e aguardam a próxima invocação,
- quando a execução é retomada (não retirada do zero, como após o retorno).
+quando a execução é retomada (não retirada do zero, como após o retorno).
 
 Há uma limitação importante: tal função não deve ser invocada explicitamente
 porque – na verdade – não é mais uma função; é um objeto gerador."""
@@ -208,7 +208,10 @@ the_list = [1 if x % 2 == 0 else 0 for x in range(10)]
 print(the_list)
 
 
-""" transformar qualquer compreensão de lista em um gerador """
+""" 
+Transformar qualquer compreensão de lista em um gerador
+Os colchetes fazem uma compreensão, os parênteses fazem um gerador.
+"""
 
 the_list = [1 if x % 2 == 0 else 0 for x in range(10)]
 the_generator = (1 if x % 2 == 0 else 0 for x in range(10))
@@ -230,7 +233,7 @@ Nota: a mesma aparência da saída não significa que ambos os loops
 funcionem da mesma maneira. No primeiro loop, a lista é criada (e iterada)
 como um todo – ela realmente existe quando o loop está sendo executado.
 
-No segundo loop, não há nenhuma lista – há apenas valores subseqüentes
+No segundo loop, não há nenhuma lista – há apenas valores subsequentes
 produzidos pelo gerador, um a um.
 """
 
