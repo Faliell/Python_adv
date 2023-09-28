@@ -1,14 +1,19 @@
 """ Também pode chamar de uma função anônima """
 
-""" lambda parameters: expression """
+""" 
+lambda parameters: expression
 
-""" Essa cláusula retorna o valor da expressão ao levar em consideração
-o valor atual do argumento lambda atual."""
+Essa cláusula retorna o valor da expressão ao levar em consideração
+o valor atual do argumento lambda atual.
+"""
 
 
 two = lambda: 2
 sqr = lambda x: x * x
 pwr = lambda x, y: x ** y
+
+print(two)
+print(sqr(3))
 
 for a in range(-2, 3):
     print(sqr(a), end=" ")
@@ -43,11 +48,15 @@ print_function([x for x in range(-2, 3)], lambda x: 2 * x ** 2 - 4 * x + 2)
 
 """ Map """
 
-
-""" map(function, list)
+""" 
+map(function, list)
 A função map() aplica a função passada por seu primeiro argumento a todos
 os elementos de seu segundo argumento e retorna um iterador que fornece
-todos os resultados subsequentes da função."""
+todos os resultados subsequentes da função.
+
+Você pode usar o iterador resultante em um loop ou convertê-lo em uma lista
+usando a função list().
+"""
 
 
 list_1 = [x for x in range(5)]
@@ -68,26 +77,26 @@ da função especificada como o primeiro argumento (a função é invocada para
 cada elemento da lista, assim como em map ()).
 
 Os elementos que retornam True da função passam no filtro – os demais
- são rejeitados."""
+são rejeitados."""
 
 
 from random import seed, randint
 
 seed()
-data = [randint(-10,10) for x in range(5)]
+data = [randint(-10, 10) for x in range(5)]
 filtered = list(filter(lambda x: x > 0 and x % 2 == 0, data))
 
 print(data)
 print(filtered)
 
 
-"""closures"""
+"""Closures"""
+
+""" closures é uma técnica que permite o armazenamento de valores,
+apesar do fato de que o contexto em que foram criados não existe mais."""
 
 
-""" fechamento é uma técnica que permite o armazenamento de valores,
- apesar do fato de que o contexto em que foram criados não existe mais."""
-
-
+# função que dá erro:
 def outer(par):
     loc = par
 
@@ -118,6 +127,11 @@ print(fun())
 
 """ é totalmente possível declarar um fechamento equipado com
  um número arbitrário de parâmetros"""
+
+"""
+Closures não só faz uso do ambiente congelado, mas também pode modificar
+seu comportamento usando valores retirados de fora.
+"""
 
 
 def make_closure(par):
