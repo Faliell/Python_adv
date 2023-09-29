@@ -1,4 +1,5 @@
-""" Uma das classes especializadas que o Python usa para armazenar dados amorfos."""
+""" Uma das classes especializadas que o Python usa para armazenar dados
+amorfos."""
 
 """
 Dados amorfos são dados que não possuem forma ou formato específico
