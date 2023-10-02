@@ -48,7 +48,11 @@ except IOError as e:
 """ readline()
 
 O método tenta ler uma linha completa de texto do arquivo e a retorna como
-uma string em caso de sucesso. Caso contrário, retorna uma string vazia
+uma string em caso de sucesso. Caso contrário, retorna uma string vazia.
+
+Pode receber um parâmetro size, que especifica o número máximo de caracteres
+a serem lidos na linha atual. Ele lerá até atingir o número de caracteres
+especificado ou até atingir o final da linha, o que ocorrer primeiro.
 """
 
 try:
