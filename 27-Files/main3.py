@@ -17,6 +17,7 @@ e processá-la de alguma forma, você precisa criá-lo explicitamente,
 usando um dos construtores disponíveis.
 """
 data = bytearray(10)
+# Tal invocação cria um objeto bytearray capaz de armazenar dez bytes.
 
 """
 são mutáveis, aceita len() e você pode acessar qualquer um de seus elementos
@@ -30,13 +31,13 @@ venha do intervalo de 0 a 255 inclusive (ValueError).
 Você pode tratar qualquer elemento da matriz de bytes como valores inteiros
 """
 
-# data = bytearray(10)
-#
-# for i in range(len(data)):
-#     data[i] = 10 - i
-#
-# for b in data:
-#     print(hex(b))
+data = bytearray(10)
+
+for i in range(len(data)):
+    data[i] = 10 - i
+
+for b in data:
+    print(hex(b))
 
 
 """ 
@@ -85,7 +86,7 @@ try:
     binary_file.close()
 
     for b in data:
-        print(hex(b), end=' ')
+        print(hex(b), end='- ')
 except IOError as e:
     print("I/O error occurred:", strerror(e.errno))
 
