@@ -3,6 +3,7 @@
 """ texto simples """
 
 stream = open('file.txt', 'rt', encoding='utf-8')
+print(stream.read())
 
 import os
 
@@ -23,11 +24,13 @@ try:
 except IOError as e:
     print("I/O error occurred: ", os.strerror(e.errno))
 
-""" Lembre-se: ler um arquivo de terabytes usando esse método pode
-corromper seu sistema operacional. """
+
 
 """ Função read(), invocada sem nenhum argumento ou com um argumento
 avaliado como None """
+
+""" Lembre-se: ler um arquivo de terabytes usando esse método pode
+corromper seu sistema operacional. """
 
 try:
     counter = 0
@@ -40,6 +43,31 @@ try:
     print("\n\nCharacters in file:", counter)
 except IOError as e:
     print("I/O error occurred: ", os.strerror(e.errno))
+
+
+""" readline()
+
+O método tenta ler uma linha completa de texto do arquivo e a retorna como
+uma string em caso de sucesso. Caso contrário, retorna uma string vazia
+"""
+
+try:
+    ccnt = lcnt = 0
+    s = open('file.txt', 'rt')
+    line = s.readline()
+    while line != '':
+        lcnt += 1
+        for ch in line:
+            print(ch, end='')
+            ccnt += 1
+        line = s.readline()
+    s.close()
+    print("\n\nCharacters in file:", ccnt)
+    print("Lines in file:     ", lcnt)
+except IOError as e:
+    print("I/O error occurred:", os.strerror(e.errno))
+
+
 
 """ readlines() """
 
@@ -81,7 +109,13 @@ try:
 except IOError as e:
     print("I/O error occurred:", os.strerror(e.errno))
 
-""" o objeto retornado pelo open()  é uma instância da classe iterável """
+
+""" 
+O objeto retornado pelo open()  é uma instância da classe iterável
+
+Você pode esperar que o objeto seja invocado automaticamente close() 
+quando qualquer leitura do arquivo atingir o final do arquivo.
+"""
 
 try:
     ccnt = lcnt = 0
@@ -95,10 +129,14 @@ try:
 except IOError as e:
     print("I/O error occurred: ", os.strerror(e.errno))
 
+
 """ 
 write()
  
-espera apenas um argumento – uma string que será transferida para um arquivo aberto
+Espera apenas um argumento – uma string que será transferida para um arquivo aberto
+
+O modo aberto w garante que o arquivo será criado do zero , mesmo que exista
+e contenha dados.
 """
 
 """ exemplo escrevendo por char """
@@ -137,5 +175,5 @@ distingui-la da saída normal do programa, ela pode ter esta aparência:
 """
 
 import sys
-sys.stderr.write("Error message")
+sys.stderr.write("Error message 123")
 
