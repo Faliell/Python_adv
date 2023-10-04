@@ -19,6 +19,12 @@ from datetime import date
 d = date(2020, 1, 4)
 print(d.strftime('%Y/%m/%d'))
 
+"""
+%Y– retorna o ano com o século como número decimal. Em nosso exemplo, estamos em 2020 .
+%m– retorna o mês como um número decimal preenchido com zeros. No nosso exemplo, é 01 .
+%d– retorna o dia como um número decimal preenchido com zeros. No nosso exemplo, é 04 .
+"""
+
 
 """ https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes"""
 
@@ -31,9 +37,15 @@ print(t.strftime("%H:%M:%S"))
 dt = datetime(2020, 11, 4, 14, 53)
 print(dt.strftime("%y/%B/%d %H:%M:%S"))
 
+"""
+%Y - retorna o ano sem século como um número decimal preenchido com zeros (no nosso exemplo é 20). 
+%B - retorna o mês como o nome completo do local (no nosso exemplo, é novembro).
+"""
 
-""" 
-strftime() time module
+
+""" strftime() - time module """
+
+"""
 também pode receber (opcionalmente) uma tupla ou um objeto struct_time.
 """
 
@@ -61,10 +73,11 @@ analisa uma string que representa um tempo para um objeto struct_time
 """
 
 import time
+
 print(time.strptime("2019/11/04 14:53:00", "%Y/%m/%d %H:%M:%S"))
 
 
-""" Date and time operations """
+""" Operações de data e hora """
 
 
 from datetime import date
@@ -108,7 +121,10 @@ print("Seconds:", delta.seconds)
 print("Microseconds:", delta.microseconds)
 
 
-""" Com operações """
+""" Com operações
+
+Como resultado dessas operações, recebemos datas e objetos datetime
+"""
 
 
 from datetime import timedelta
