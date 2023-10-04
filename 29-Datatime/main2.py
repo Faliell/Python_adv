@@ -1,13 +1,15 @@
-""" Creating time objects """
+""" Criando objetos de tempo """
 
-
-""" time(hour, minute, second, microsecond, tzinfo, fold) """
 
 """ 
+time(hour, minute, second, microsecond, tzinfo, fold)
+
+
 microsecond	must be greater than or equal to 0 and less than 1000000.
 tzinfo	    The tzinfo parameter must be a tzinfo subclass object or None (default).
 fold	    The fold parameter must be 0 or 1 (default 0).
 """
+
 
 from datetime import time
 
