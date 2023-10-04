@@ -1,4 +1,4 @@
-"""Creating datetime objects"""
+"""Criando objetos de data e hora"""
 
 
 """
@@ -6,6 +6,12 @@ datetime(year, month, day, hour, minute, second, microsecond, tzinfo, fold)
 """
 
 import datetime
+
+dt = datetime.datetime(2019, 11, 4, 14, 53)
+
+print("Datetime:", dt)
+print("Date:", dt.date())
+print("Time:", dt.time())
 
 
 # Criando uma data específica
@@ -23,9 +29,11 @@ print("Horário data_especifica:", hora)
 """
 today() — retorna a data e hora local atual com o atributo tzinfo
 definido como none, não aceita argumento
+
 now() — retorna a data e hora local atual igual ao método today,
 a menos que passemos o argumento opcional tz para ele. O argumento deste
 método deve ser um objeto da subclasse tzinfo;
+
 utcnow() — retorna a data e hora UTC atuais com o atributo tzinfo
 definido como none.
 """
