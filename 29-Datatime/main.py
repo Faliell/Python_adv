@@ -47,9 +47,9 @@ d = date.fromtimestamp(timestamp)
 print("Date:", d)
 
 
-""" Criando um objeto de data usando o formato ISO """
-
 """ 
+Criando um objeto de data usando o formato ISO
+
 Método fromisoformat usa uma data no formato AAAA-MM-DD, compatível
 com o padrão ISO 8601
 """
@@ -63,7 +63,14 @@ parsed_date = date.fromisoformat(date_string)
 print(parsed_date)
 
 
-""" replace() """
+""" 
+replace() 
+
+Os parâmetros ano, mês e dia são opcionais
+ 
+O método replace retorna um objeto de data alterado, portanto você
+deve se lembrar de atribuí-lo a alguma variável. 
+"""
 
 
 from datetime import date
@@ -74,15 +81,10 @@ print(d)
 d = d.replace(year=1992, month=1, day=16)
 print(d)
 
+
 """ 
-Os parâmetros ano, mês e dia são opcionais
- 
-O método replace retorna um objeto de data alterado, portanto você
-deve se lembrar de atribuí-lo a alguma variável. 
-"""
+weekday()
 
-
-""" weekday()
 retorna o dia da semana como um número inteiro,
 onde 0 é segunda-feira e 6 é domingo 
 """
@@ -91,7 +93,9 @@ d = date(2019, 11, 4)
 print(d.weekday())
 
 
-""" isoweekday()
+""" 
+isoweekday()
+
 que também retorna o dia da semana como um número inteiro,
 mas 1 é segunda-feira e 7 é domingo
 O número inteiro retornado pelo método segue a especificação ISO 85601.
