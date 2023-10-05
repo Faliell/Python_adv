@@ -20,7 +20,9 @@ os nomes apropriados dos meses e dias da semana.
 """ Criando um objeto Calendário
  
 Recebe um parâmetro opcional, firstweekday, por padrão igual a 0 (segunda-feira). 
- """
+
+iterweekdays - que retorna um iterador para números de dias da semana.
+"""
 
 import calendar
 
@@ -29,8 +31,7 @@ c = calendar.Calendar(calendar.SUNDAY)
 for weekday in c.iterweekdays():
     print(weekday, end=" ")
 
-""" iterweekdays, que retorna um iterador para números de dias da semana. 
-"""
+print()
 
 
 """ itermonthdates()
@@ -48,8 +49,10 @@ c = calendar.Calendar()
 for date in c.itermonthdates(2019, 11):
     print(date, end=" ")
 
+print()
 
-""" itermonthdates() """
+
+""" itermonthdays() """
 
 import calendar
 
@@ -58,17 +61,20 @@ c = calendar.Calendar()
 for iter in c.itermonthdays(2019, 11):
     print(iter, end=" ")
 
+print()
 
 """ 
-itermonthdates2 – retorna dias na forma de tuplas consistindo de um dia
+itermonthdays2 – retorna dias na forma de tuplas consistindo de um dia
 do número do mês e um número do dia da semana;
-itermonthdates3 – retorna dias na forma de tuplas que consistem em números de ano,
+
+itermonthdays3 – retorna dias na forma de tuplas que consistem em números de ano,
 mês e dia do mês. 
-itermonthdates4 – retorna dias na forma de tuplas que consistem em números de ano,
+
+itermonthdays4 – retorna dias na forma de tuplas que consistem em números de ano,
 mês, dia do mês e dia da semana. 
 """
 
-print()
+
 """ monthdays2calendar()
  
 retorna uma lista de listas, onde cada sublista representa uma semana no mês especificado.
