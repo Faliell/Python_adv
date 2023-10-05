@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="71b64f26-8099-4243-9ed8-ebc0fc4bf88d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main4.py" beforeDir="false" afterPath="$PROJECT_DIR$/main4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../30-Calendar/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../30-Calendar/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +35,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/fabioschapowal/Desktop/Python/Python_adv/29-Datatime"
+    "last_opened_file_path": "/Users/fabioschapowal/Desktop/Python/Python_adv/29-Datatime",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RunManager">

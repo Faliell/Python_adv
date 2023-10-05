@@ -26,9 +26,13 @@ m – number of columns (default 3)
 """
 
 
-""" prcal() """
+""" prcal() 
+
+usa os mesmos parâmetros da função calendar, mas não requer o uso da função print
+para exibir o calendário
+"""
 import calendar
-calendar.prcal(2023)
+calendar.prcal(2022)
 
 
 """ month()  prmonth()"""
@@ -43,6 +47,7 @@ import calendar
 calendar.setfirstweekday(calendar.SUNDAY)
 calendar.prmonth(2023, 12)
 
+
 """ weekday() """
 
 import calendar
@@ -53,7 +58,8 @@ print(calendar.weekday(2023, 8, 28))
  
 Exige que você especifique a largura em caracteres para um dia da semana. 
 Se a largura fornecida for maior que 3, você ainda receberá os nomes
-abreviados dos dias da semana com três caracteres."""
+abreviados dos dias da semana com três caracteres.
+"""
 
 import calendar
 print(calendar.weekheader(1))
@@ -64,7 +70,10 @@ print(calendar.weekheader(1))
 import calendar
 
 print(calendar.isleap(2020))
-print(calendar.leapdays(2010, 2021))  # Up to but not including 2021.
+print(calendar.leapdays(2010, 2021))
+
+""" No exemplo obtemos o resultado 3, pois no período de 2010 a 2020 existem apenas
+três anos bissextos (nota: 2021 não está incluído)."""
 
 
 
