@@ -22,7 +22,7 @@ uma das entidades que ele armazena.
 
 
 
-""" dois "sin"s diferente """
+""" dois "sin"s diferentes """
 # import math
 #
 # def sin(x):

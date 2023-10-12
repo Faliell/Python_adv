@@ -2,9 +2,12 @@ print("I like to be a module.")
 
 print(__name__)
 
-"""quando você executa um arquivo diretamente, sua variável __name__ é definida como __main__;
-quando um arquivo é importado como um módulo, sua variável __name__ é definida como
- o nome do arquivo (excluindo .py)"""
+"""
+quando você executa um arquivo diretamente, sua variável __name__ é definida
+como __main__;
+quando um arquivo é importado como um módulo, sua variável __name__ é definida
+como o nome do arquivo (excluindo .py)
+"""
 
 
 """ Pode informar aos seus usuários que esta é a sua variável,

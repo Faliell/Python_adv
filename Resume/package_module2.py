@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 
 """
-a linha que começa com #!tem muitos nomes - shabang , shebang , hashbang ,
-librabang ou hashpling. Do ponto de vista do Python, é apenas um comentário , pois começa com #.
+A linha que começa com #! tem muitos nomes - shabang, shebang, hashbang,
+librabang ou hashpling. Do ponto de vista do Python, é apenas um comentário,
+pois começa com #.
 Para sistemas operacionais Unix e semelhantes a Unix (incluindo MacOS),
 essa linha instrui o sistema operacional sobre como executar o conteúdo do
 arquivo (em outras palavras, qual programa precisa ser iniciado para interpretar
