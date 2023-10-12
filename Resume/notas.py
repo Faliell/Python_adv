@@ -16,7 +16,7 @@ eg. print(os.path.isfile('data.txt'))
 """
 
 # python aceita isso:
-if 10 > 1 == 10:
+if 10 > 1 < 10:
     print(1)
 
 
