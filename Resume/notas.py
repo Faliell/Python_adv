@@ -35,7 +35,7 @@ print(dir(math))
 
 
 """
-The seed() method has no defined return value and therefore it returns None
+O método seed() não tem um valor de retorno definido, pelo que devolve None
 """
 
 
@@ -49,7 +49,8 @@ You need the plus sign + to have reading and writing.
 """
 
 """
-lista argv são sempre tratados como strings
+argv
+lista, os itens são sempre tratados como strings
 """
 
 
@@ -77,3 +78,25 @@ print(res)  # 2
 print('Al' * 2 <= 'Alan')  # True
 # 'AlAl' is less than 'Alan' because 'A' is less than 'a'.
 """
+
+
+# ERROR:
+# print(float("1, 3"))
+
+"""
+A função eval() em Python é usada para avaliar uma expressão Python
+representada como uma string
+
+x = 5
+y = 10
+expressao = "x + y"
+resultado = eval(expressao)
+print(resultado)  # Isso imprimirá 15
+"""
+
+"""
+randrange(1, 5)
+o segundo argumento do método  na biblioteca padrão Python não é inclusivo
+"""
+
+
