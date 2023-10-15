@@ -5,8 +5,6 @@ Python will created a reference to the same object.
 Therefore those two strings will have the same identity.
 """
 
-
-
 """
 isfile() 
 It checks whether the passed argument is a file.
@@ -16,7 +14,6 @@ eg. print(os.path.isfile('data.txt'))
 # python aceita isso:
 # if 10 > 1 < 10:
 #     print(1)
-
 
 """
 The "return" with no value will return None
@@ -45,12 +42,6 @@ __bases__ is a tuple which contains the direct superclasses.
 w+ or w
 You need the plus sign + to have reading and writing.
 """
-
-"""
-argv
-lista, os itens são sempre tratados como strings
-"""
-
 
 """
 The exponentiation operator has an associativity from right to left
@@ -134,6 +125,7 @@ f: Indica que o valor a ser inserido é um número de ponto flutuante.
 # print(formatado)
 
 """
+%d
 será tratado como um número inteiro na string formatada
 """
 # numero = 42
@@ -167,6 +159,21 @@ binário (por exemplo, 'rb' ou 'wb').
 modo de texto (por exemplo, 'rt' ou 'wt').
 '+'	Leitura e escrita. Adicione '+' ao modo (por exemplo, 'r+' ou 'w+')
 para permitir leitura e escrita no arquivo.
+
+"""
+
+"""
+file.seek(offset, whence)
+
+offset: É um valor inteiro que especifica a posição para onde você deseja
+mover o cursor (em bytes). O valor positivo move o cursor para frente no arquivo,
+e o valor negativo move o cursor para trás.
+
+whence (opcional): É um valor que especifica de onde você deseja calcular o
+deslocamento. Os valores possíveis são:
+0 (padrão): Calcula o deslocamento em relação ao início do arquivo.
+1: Calcula o deslocamento em relação à posição atual do cursor.
+2: Calcula o deslocamento em relação ao final do arquivo.
 """
 
 
@@ -178,6 +185,11 @@ errno.EACCES - Permission denied
 
 
 """
+argv
+argv é usada com o módulo sys, para acessar argumentos passados a um
+script ou programa a partir da linha de comando. 
+retorna lista, os itens são sempre tratados como strings
+
 terminal: python index.py Hello
 from sys import argv
 print(argv[1])
@@ -241,8 +253,6 @@ Operador de atribuição =
 """
 fabs() returns the float value of the absolute value.
 floor() rounds a number down to the nearest integer
-Those are the two you need here.
-The others are of no use here:
 fmod() returns the float value of the remainder.
 ceil() rounds a number up to the nearest integer
 frexp() returns the mantissa and the exponent.
@@ -253,3 +263,60 @@ frexp() returns the mantissa and the exponent.
 # print(math.frexp(4))    # (0.5, 3)
 # print(math.fmod(7, 2))  # 1.0
 # print(math.ceil(3.1))   # 4
+
+
+"""
+Hierarquia
+https://docs.python.org/3/library/exceptions.html#exception-hierarchy
+"""
+
+"""
+sorted()   
+Você pode usar com qualquer objeto iterável, não apenas listas.
+Retorna uma nova lista e não modifica a lista original.
+nova_lista = sorted(lista)
+
+sort()
+Disponível apenas para listas. Ele ordena a própria lista.
+lista = [3, 1, 2, 4]
+lista.sort()
+"""
+
+"""
+join()
+string_resultante = separador.join(iterável)
+"""
+# palavras = ["Python", "é", "uma", "linguagem"]
+# print(" ".join(palavras))
+
+
+"""
+Quando você chama uma função com menos argumentos do que ela espera,
+você pode gerar um TypeError, especificamente um TypeError do tipo "missing
+positional argument" (argumento posicional ausente).
+"""
+
+"""
+versão do pip:
+pip --version
+pip -V
+"""
+
+"""
+em Bash:
+
+"-" (Hífen Simples):
+Usado para passar opções curtas ou abreviadas para um comando.
+Geralmente, as opções com hífen simples são opções de uma letra ou configurações
+curtas. -V -h
+
+"--" (Hífen Duplo):
+O hífen duplo é usado para passar opções longas e descritivas para um comando.
+--version --help
+"""
+
+
+"""
+".pyc" quando se trata de arquivos que armazenam o bytecode Python compilado.
+"""
+
