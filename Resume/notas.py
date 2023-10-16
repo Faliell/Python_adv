@@ -363,3 +363,47 @@ e o ambiente em que ele é executado. Você pode redirecionar ou manipular essas
 para realizar tarefas específicas, como redirecionar a saída para um arquivo ou ler dados de uma fonte
 diferente do teclado.
 """
+
+"""
+o módulo que suporta expressões regulares é chamado re
+"""
+
+"""
+for x in open('file', 'rt'):
+    print(x)
+    
+Le o arquivo linha por linha.
+"""
+
+
+"""
+import platform
+ 
+print(platform.platform())   # e.g. macOS-10.16-x86_64-i386-64bit
+print(platform.processor())  # e.g. i386
+print(platform.node())          # network name
+
+"""
+
+"""
+"not" operator has the highest precedence,
+followed by the "and" operator.
+The "or" operator has the lowest precedence.
+"""
+
+"""
+A função map pode aceitar mais de dois argumentos, mas os primeiros
+dois são obrigatórios
+map(função, iterável1, iterável2, ...)
+Retorna um objeto de mapeamento, que é um iterador
+"""
+
+"""
+class Test:
+    def __init__(self, id):
+        self.id = id
+        id = 100  # This is a local variable of this method
+
+x = Test(23)
+print(x.id)  # 23
+"""
