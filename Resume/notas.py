@@ -320,3 +320,27 @@ O hífen duplo é usado para passar opções longas e descritivas para um comand
 ".pyc" quando se trata de arquivos que armazenam o bytecode Python compilado.
 """
 
+"""
+When there is no __str__() method present and you print an object,
+Python shows the object id in that way.
+"""
+
+"""
+o bloco else em uma estrutura try/except é executado quando nenhuma exceção
+é lançada no bloco
+"""
+
+"""
+você pode usar um loop for para iterar por meio de uma string
+"""
+# minha_string = "Olá, mundo!"
+#
+# for caractere in minha_string:
+#     print(caractere)
+
+
+"""
+If a function does not have the keyword return
+the function will return the value None
+The same happens if there is no value after the keyword return
+"""
