@@ -320,3 +320,21 @@ O hífen duplo é usado para passar opções longas e descritivas para um comand
 ".pyc" quando se trata de arquivos que armazenam o bytecode Python compilado.
 """
 
+
+"""
+sys.stdin: Esta é a corrente de entrada padrão (standard input). Ela está associada ao teclado e é usada
+para receber dados de entrada a partir do usuário ou de outros programas. Por exemplo, a função input()
+em Python lê dados do usuário a partir de sys.stdin.
+
+sys.stdout: Esta é a corrente de saída padrão (standard output). Ela está associada ao monitor ou à tela
+e é usada para exibir dados de saída, como resultados de programas. Por exemplo, a função print() em Python
+escreve dados em sys.stdout.
+
+sys.stderr: Esta é a corrente de erro padrão (standard error). Assim como sys.stdout, ela está associada ao
+monitor e é usada para exibir mensagens de erro e exceções.
+
+Essas correntes são objetos da biblioteca sys e permitem a comunicação padrão entre o seu programa Python 
+e o ambiente em que ele é executado. Você pode redirecionar ou manipular essas correntes, se necessário,
+para realizar tarefas específicas, como redirecionar a saída para um arquivo ou ler dados de uma fonte
+diferente do teclado.
+"""
