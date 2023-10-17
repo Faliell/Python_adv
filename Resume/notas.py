@@ -411,3 +411,29 @@ class Test:
 x = Test(23)
 print(x.id)  # 23
 """
+
+
+"""
+O else executa sempre após o while terminar, se tiver o break o
+else não é executado
+"""
+
+
+"""
+The Exception class contains a property named args and it is a: tuple
+"""
+
+
+"""
+readline():
+A função readline() é usada para ler uma única linha de um arquivo.
+Ela lê a próxima linha no arquivo toda vez que é chamada.
+Retorna a linha lida como uma string, incluindo o caractere de nova
+linha (\n) no final da linha.
+
+readlines():
+A função readlines() é usada para ler todas as linhas de um arquivo e
+retorná-las como uma lista de strings.
+Cada elemento da lista corresponde a uma linha do arquivo, incluindo o
+caractere de nova linha (\n) no final de cada linha.
+"""
