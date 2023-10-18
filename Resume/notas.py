@@ -445,3 +445,52 @@ caractere de nova linha (\n) no final de cada linha.
 # d[1] += 1
 #
 # print(d)
+
+
+"""
+O método read() tem um parâmetro opcional.
+Se for dado, esse número de caracteres é lido.
+Se não for dado, é lido o ficheiro inteiro.
+file.readline([tamanho])
+O método readline() tem também um parâmetro opcional
+para especificar o número de caracteres a serem lidos.
+Mas ele só leria esse número de caracteres da
+da primeira linha.
+"""
+
+"""
+Esta pergunta é sobre a passagem de argumentos.
+Há uma grande diferença entre passar um tipo de dados mutável ou imutável.
+O inteiro imutável em x é copiado para p1
+e a alteração de p1 não afecta x
+A lista mutável em y é referenciada para p2
+e a alteração de p2 afecta y
+"""
+def func(p1, p2):
+    p1 = 1
+    p2[0] = 42
+
+
+x = 3
+y = [1, 2, 3]
+
+func(x, y)
+
+print(x, y[0])  # 3 42
+
+
+"""
+import x.z.f
+se f é uma funcao vai dar erro, pq só pode chamar modulo com import
+"""
+
+"""
+lista.insert(índice, elemento)
+del frutas[1]
+
+insert() insere um item numa determinada posição.
+O primeiro argumento é o índice do elemento antes do qual inserir.
+insert(0, 1) insere 1 antes do índice 0 (na frente da lista).
+A palavra-chave del elimina o objeto dado.
+Neste caso, x[1]
+"""
