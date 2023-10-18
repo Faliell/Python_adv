@@ -437,3 +437,11 @@ retorná-las como uma lista de strings.
 Cada elemento da lista corresponde a uma linha do arquivo, incluindo o
 caractere de nova linha (\n) no final de cada linha.
 """
+
+""" em um dic str é diferente de int como key"""
+# d = {}
+# d[1] = 1
+# d['1'] = 2
+# d[1] += 1
+#
+# print(d)
