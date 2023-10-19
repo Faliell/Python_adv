@@ -494,3 +494,67 @@ insert(0, 1) insere 1 antes do índice 0 (na frente da lista).
 A palavra-chave del elimina o objeto dado.
 Neste caso, x[1]
 """
+
+
+"""
+print('' in 'alphabet') # True
+Uma string vazia é tratada como se
+fosse uma parte (invisível) de cada string.
+"""
+
+
+"""
+string.split()
+O método split() sem passar nenhum argumento
+dividirá a string nos seus espaços em branco e retornará uma lista das partes.
+"""
+
+"""
+__eq__() é um método especial usado para definir a lógica de igualdade entre 
+objetos de uma classe. Esse método é chamado quando você usa o operador
+de igualdade == para comparar dois objetos de uma classe personalizada
+
+def __eq__(self, other):
+self se refere ao objeto em que o método é chamado (o objeto da instância atual).
+other se refere ao objeto que está sendo comparado com o objeto atual.
+"""
+
+"""
+String literals that are delimited by whitespace are automatically concatenated.
+"""
+#print('Peter' 'Wellert')  # PeterWellert
+
+"""
+__dict__
+Atributos de Instância: Para objetos de instâncias de uma classe, o __dict__
+contém pares chave-valor correspondentes aos atributos de instância do objeto.
+Isso permite que você acesse e modifique os atributos diretamente através
+do dicionário.
+Atributos de Classe: Para classes, o __dict__ contém os atributos da classe,
+incluindo variáveis de classe e métodos. Isso permite que você acesse e modifique
+os atributos da classe diretamente através do dicionário.
+"""
+
+# print(-abs(3))  # -3
+
+
+"""
+listdir() never includes
+the special entries . and ..
+"""
+
+"""
+shuffle()
+random.shuffle(minha_lista)
+Ordena aleatoriamente a própria lista e não retorna uma nova lista
+"""
+
+"""
+Com pip list obtém uma lista com todos os seus pacotes instalados.
+Escolha um de seus pacotes e digite pip show package-name
+"""
+
+"""
+index()
+lista.index(valor, start, stop)
+"""
