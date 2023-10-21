@@ -87,6 +87,10 @@ print(resultado)  # Isso imprimirá 15
 randrange(1, 5)
 o segundo argumento do método  na biblioteca padrão Python não é inclusivo
 """
+from random import randrange
+random_num1 = randrange(10)  # Gera um número aleatório entre 0 e 9.
+random_num2 = randrange(1, 11)  # Gera um número aleatório entre 1 e 10.
+random_num3 = randrange(0, 100, 10)  # Gera um número aleatório entre 0 e 90 com um passo de 10.
 
 """
 randint(1, 5) the stop is inclusive.
@@ -181,6 +185,7 @@ deslocamento. Os valores possíveis são:
 errno.EEXIST - File exists
 errno.EBADF - Bad file number
 errno.EACCES - Permission denied
+errno.ENOENT "No such file or directory"
 """
 
 
@@ -557,4 +562,106 @@ Escolha um de seus pacotes e digite pip show package-name
 """
 index()
 lista.index(valor, start, stop)
+é usado para encontrar a primeira ocorrência de um valor específico dentro
+de uma lista em Python. Ele retorna o índice da primeira ocorrência desse valor.
+"""
+
+"""
+data = 'abbabadaadbbaccabc'
+print(data.count('ab', 1))
+O primeiro argumento é a subcadeia 'ab' que você deseja contar.
+O segundo argumento é 1, o que significa que a contagem começará a
+partir do índice 1 da string data.
+"""
+
+# foo = (1, 2, 3)
+# foo.index(0)  # ValueError: tuple.index(x): x not in tuple
+
+
+"""
+Neste caso, a e b estão apontando para o mesmo objeto, então, se 
+você modificar um deles, o outro também será modificado, porque ambos
+se referem à mesma instância da classe A."""
+# class A:
+#
+#     def __init__(self, v=2):
+#         self.v = v
+#
+#     def set(self, v=1):
+#         self.v += v
+#         return self.v
+#
+#
+# a = A()
+# b = a
+# b.set()
+#
+# print(a.v)
+
+
+# b = bytearray(3)
+# print(b)  # bytearray(b'\x00\x00\x00')
+
+
+"""
+set() é uma função que cria um objeto do tipo conjunto (set). Um conjunto
+é uma coleção de elementos não ordenados e únicos.
+"""
+# data = set([1, 2, 2, 3, 3, 3, 4, 4, 4, 4])
+# print(len(data))
+
+
+"""
+O símbolo errno.ENOENT refere-se a um código de erro na programação
+de computadores que significa "No such file or directory" (ficheiro ou
+diretório inexistente).
+"""
+
+
+"""
+O operador x << 1 está deslocando os bits de x para a esquerda em uma posição.
+Em termos simples, isso é equivalente a multiplicar x por 2 elevado à primeira
+potência. Assim, em cada iteração do loop, o valor de x é dobrado.
+
+Aqui está o que acontece em cada iteração:
+
+Primeira iteração: x era 1, depois x se torna 2 (1 << 1).
+Segunda iteração: x era 2, depois x se torna 4 (2 << 1).
+Terceira iteração: x era 4, depois x se torna 8 (4 << 1).
+"""
+# x = 1
+# while x < 10:
+#     print('*')
+#     x = x << 1
+
+
+"""
+O operador xor bit a bit devolve 1 quando um operando é 1 e o outro é 0
+Quando ambos os operandos são 0 ou ambos os operandos são 1, devolve 0
+"""
+# print(1 ^ 1)  # 0
+# print(1 ^ 0)  # 1
+# print(0 ^ 1)  # 1
+# print(0 ^ 0)  # 0
+
+"""
+posso inicializae um global dentro da func
+"""
+# def func(x):
+#     global y
+#     y = x * x
+#     return y
+#
+# func(2)
+# print(y)  # 4
+
+
+"""
+id() é usada para obter a identificação (ou endereço de memória)
+de um objeto
+
+Um objeto é mutável e se criar dois novos objectos com os mesmos valores
+eles continuarão a ser objectos diferentes e terão ids diferentes.
+Uma string é imutável e se criar duas cadeias de caracteres com o mesmo valor
+ambas apontarão para o mesmo objeto e, portanto, terão os mesmos ids.
 """
