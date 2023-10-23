@@ -212,7 +212,6 @@ Index 1 holds the first argument from the command line.
 #     def a(self):
 #         print('a')
 #
-# # class B(A)  dá erro de mro
 # class B:
 #     def a(self):
 #         print('b')
@@ -226,6 +225,22 @@ Index 1 holds the first argument from the command line.
 # c.c()  # a
 # print(C.mro())
 #################################
+# class A:
+#     def a(self):
+#         print('a')
+#
+# class B(A):  # dá erro de mro
+#     def a(self):
+#         print('b')
+#
+# class C(A, B):
+#     def c(self):
+#         self.a()
+#
+# c = C()
+# c.c()
+# print(C.mro())
+###############################################
 
 
 """
@@ -427,6 +442,10 @@ else não é executado
 """
 The Exception class contains a property named args and it is a: tuple
 """
+# try:
+#     raise ValueError()  # Sem mensagem de erro específica
+# except ValueError as e:
+#     print(e.args)  # Isso imprimirá uma tupla vazia ()
 
 
 """
@@ -645,7 +664,7 @@ Quando ambos os operandos são 0 ou ambos os operandos são 1, devolve 0
 # print(0 ^ 0)  # 0
 
 """
-posso inicializae um global dentro da func
+posso inicializar um global dentro da func
 """
 # def func(x):
 #     global y
@@ -665,3 +684,82 @@ eles continuarão a ser objectos diferentes e terão ids diferentes.
 Uma string é imutável e se criar duas cadeias de caracteres com o mesmo valor
 ambas apontarão para o mesmo objeto e, portanto, terão os mesmos ids.
 """
+
+
+""" bloco try:"""
+# try:
+#     result = 1 / 0  # Tentando dividir por zero
+# except (ZeroDivisionError, ArithmeticError) as e:
+#     print(f"Ocorreu um erro: {e}")
+
+
+"""
+assert gera um  AssertionError se não acertar
+"""
+
+
+# data = [1, 2, 3, 4] + [1]
+# print(data)  # [1, 2, 3, 4, 1]
+
+
+# print(type(1J))  # <class 'complex'>
+# print(type(1E1))  # <class 'float'>
+
+
+# data = ()
+# print(data.__len__())
+
+# x = 2
+# y = 1 + 1
+# print(x is y)
+# print(id(x), id(y))
+
+
+# x = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# x[::2] = 10, 20, 30, 40, 50,  # 60 da erro
+# print(x)
+# x[1:2] = 5,5
+# print(x)
+
+
+# print(1 & 0)      # 0
+# print(1 | 0)      # 1
+# print(1 ^ 0)      # 1
+
+
+"""
+sys.path é uma lista com todas as pastas onde o Python procura por módulos
+quando usas a palavra-chave import.
+A primeira é sempre a pasta que contém o script que executaste.
+"""
+
+# list1 = ['Peter', 'Paul', 'Mary', 'Jane']
+# list2 = ['Peter', 'Paul', 'Mary', 'Jane']
+#
+# print(list1 is not list2)  # True
+# print(list1 != list2)  # False
+
+
+# print('\n' in """
+# """)  # True
+# # A newline character is a part of every multi-line string.
+
+
+"""
+O dicionário pode ter diferentes tipos de dados como chave.
+MAS se um inteiro e um float tiverem o mesmo valor,
+o segundo valor substitui os primeiros valores.
+E o primeiro índice continua a dar o nome.
+"""
+# data = {}
+# data[1] = 1
+# data['1'] = 2
+# data[1.0] = 4
+# print(data)  # {1: 4, '1': 2}
+
+
+"""
+Yes, a tuple can be the index of a dictionary
+"""
+# x = {(1, 2): 1, (2, 3): 2}
+# print(x[1, 2])
