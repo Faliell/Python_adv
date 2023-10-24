@@ -490,17 +490,17 @@ e a alteração de p1 não afecta x
 A lista mutável em y é referenciada para p2
 e a alteração de p2 afecta y
 """
-def func(p1, p2):
-    p1 = 1
-    p2[0] = 42
-
-
-x = 3
-y = [1, 2, 3]
-
-func(x, y)
-
-print(x, y[0])  # 3 42
+# def func(p1, p2):
+#     p1 = 1
+#     p2[0] = 42
+#
+#
+# x = 3
+# y = [1, 2, 3]
+#
+# func(x, y)
+#
+# print(x, y[0])  # 3 42
 
 
 """
@@ -763,3 +763,102 @@ Yes, a tuple can be the index of a dictionary
 """
 # x = {(1, 2): 1, (2, 3): 2}
 # print(x[1, 2])
+
+# x= "a"
+# print(bool(x))  # True
+
+
+"""
+writelines() é usado para escrever uma lista de strings em um objeto de arquivo.
+Ele escreve cada string na lista como uma linha no arquivo, sem adicionar
+automaticamente caracteres de quebra de linha entre as linhas. 
+
+with open('arquivo.txt', 'w') as arquivo:
+    linhas = ['Linha 1', 'Linha 2', 'Linha 3']
+    arquivo.writelines(linhas)
+Após a execução deste código, o arquivo 'arquivo.txt' conterá as linhas:
+
+Linha 1Linha 2Linha 3
+"""
+
+
+# print(not 0)  # True
+# print(not 23)  # False
+# print(not '')  # True
+# print(not 'Peter')  # False
+# print(not None)  # True
+
+"""
+intervalo [0.0, 1.0), o que significa que ele pode ser igual a 0.0,
+mas nunca será igual a 1.0.
+"""
+# import random
+# print(random.random())
+
+
+# class A:
+#     A = 23
+#
+#     def __init__(self):
+#         self.a = 42
+#
+# x = A()
+# print(hasattr(A, 'a'))  #False
+# print(hasattr(x, 'A'))  #True
+# print(hasattr(x, 'a'))  #True
+
+
+
+# class Failure(Exception):
+#     def __init__(self, message):
+#         self.message = message
+#
+#     def __str__(self):
+#         return "out of order"
+#
+#
+# try:
+#     print("turn on")
+#     raise Failure("crash")
+# except Failure as problem:
+#     print(problem)
+# else:
+#     print("success")
+
+"""
+class Failure(Exception):
+    def __init__(self, message):
+        self.message = message
+
+    def __str__(self):
+        return self.message  # Retorna a mensagem definida ao invés de "out of order"
+"""
+
+
+"""
+Closure
+
+def multiplicador(fator):
+    def multiplicar(numero):
+        return numero * fator
+    return multiplicar
+
+# Criar uma função que multiplica por 2
+dobro = multiplicador(2)
+resultado = dobro(5)  # Isso retornará 10
+
+# Criar uma função que multiplica por 3
+triplo = multiplicador(3)
+resultado = triplo(5)  # Isso retornará 15
+"""
+def quote(quo):
+    def embed(str):
+        return quo + str + quo
+
+    return embed
+
+
+dblq = quote('"')
+print(dblq('Jane Doe'))
+
+
