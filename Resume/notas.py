@@ -851,14 +851,51 @@ resultado = dobro(5)  # Isso retornará 10
 triplo = multiplicador(3)
 resultado = triplo(5)  # Isso retornará 15
 """
-def quote(quo):
-    def embed(str):
-        return quo + str + quo
+# def quote(quo):
+#     def embed(str):
+#         return quo + str + quo
+#
+#     return embed
+#
+#
+# dblq = quote('"')
+# print(dblq('Jane Doe'))
 
-    return embed
+
+"""
+o método read(1) em modo de leitura ("r") para ler de um arquivo,
+o argumento 1 indica que você está solicitando a leitura de 1 byte,
+o que, em termos gerais, corresponde a 1 caractere.
+"""
 
 
-dblq = quote('"')
-print(dblq('Jane Doe'))
+"""
+None + 1 dá errado
+"""
 
 
+# print(Hello, World!)  # SyntaxError: invalid syntax
+
+
+"""
+Sem a linha:
+self.args = (msg,)
+a solução seria: exex
+O método __init__() da classe-mãe Exception é chamado com
+msg + msg que é 'exex'
+Mas a variável args do próprio objeto é atribuída a (msg,)
+que é a tupla ('ex',)
+e que é impressa quando o próprio objeto é impresso.
+"""
+class Ex(Exception):
+    def __init__(self, msg):
+        Exception.__init__(self, msg + msg)
+        self.args = (msg,)
+
+
+try:
+    raise Ex('ex')
+except Ex as e:
+    print(e)
+except Exception as e:
+    print(e)
