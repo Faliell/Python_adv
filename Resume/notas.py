@@ -265,7 +265,7 @@ Operadores de multiplicação *, divisão /, e divisão inteira //
 Operador de módulo %
 Operadores de adição + e subtração -
 Operadores de comparação (por exemplo, <, <=, >, >=, ==, !=)
-Operadores lógicos and, or, not
+Operadores lógicos not, and, or
 Operador de atribuição =
 """
 
@@ -887,15 +887,20 @@ Mas a variável args do próprio objeto é atribuída a (msg,)
 que é a tupla ('ex',)
 e que é impressa quando o próprio objeto é impresso.
 """
-class Ex(Exception):
-    def __init__(self, msg):
-        Exception.__init__(self, msg + msg)
-        self.args = (msg,)
+# class Ex(Exception):
+#     def __init__(self, msg):
+#         Exception.__init__(self, msg + msg)
+#         self.args = (msg,)
+#
+#
+# try:
+#     raise Ex('ex')
+# except Ex as e:
+#     print(e)
+# except Exception as e:
+#     print(e)
 
 
-try:
-    raise Ex('ex')
-except Ex as e:
-    print(e)
-except Exception as e:
-    print(e)
+# print(list("azx"))  # ['a', 'z', 'x']
+
+# print(int(0.8)) # 0
