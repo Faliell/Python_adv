@@ -20,7 +20,7 @@ The "return" with no value will return None
 """
 
 """
-The dir() function returns all properties
+The dir() function returns list, all properties
 and methods of the specified object, without the values.
 
 eg: 
@@ -81,6 +81,8 @@ y = 10
 expressao = "x + y"
 resultado = eval(expressao)
 print(resultado)  # Isso imprimirá 15
+
+tem que ser uma expressao:  eval("www") dá errp
 """
 
 """
@@ -103,6 +105,7 @@ and returns a string.
 
 The readlines() function also reads the whole file
 and returns a list of the single lines.
+
 And you can also iterate through the file object.
 In each iteration you will get one line.
 """
@@ -711,15 +714,15 @@ assert gera um  AssertionError se não acertar
 
 # x = 2
 # y = 1 + 1
-# print(x is y)
-# print(id(x), id(y))
+# print(x is y) # True
+# print(id(x), id(y))  # 4467641752 4467641752
 
 
 # x = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 # x[::2] = 10, 20, 30, 40, 50,  # 60 da erro
 # print(x)
 # x[1:2] = 5,5
-# print(x)
+# print(x)  # [10, 5, 5, 20, 4, 30, 6, 40, 8, 50]
 
 
 # print(1 & 0)      # 0
@@ -789,7 +792,7 @@ Linha 1Linha 2Linha 3
 # print(not None)  # True
 
 """
-intervalo [0.0, 1.0), o que significa que ele pode ser igual a 0.0,
+intervalo (0.0, 1.0), o que significa que ele pode ser igual a 0.0,
 mas nunca será igual a 1.0.
 """
 # import random
@@ -859,7 +862,7 @@ resultado = triplo(5)  # Isso retornará 15
 #
 #
 # dblq = quote('"')
-# print(dblq('Jane Doe'))
+# print(dblq('Jane Doe'))  # "Jane Doe"
 
 
 """
@@ -903,4 +906,13 @@ e que é impressa quando o próprio objeto é impresso.
 
 # print(list("azx"))  # ['a', 'z', 'x']
 
-# print(int(0.8)) # 0
+# print(int(-0.8))  # 0
+# print(int(0.8))  # 0
+# print(int(-1.6))  # -1
+
+
+# print(ord("A"))  # 65
+# print(ord("a"))  # 97
+# print(ord(" "))  # 32
+# print(chr(97))  # a
+
