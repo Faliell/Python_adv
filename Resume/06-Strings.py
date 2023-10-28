@@ -105,6 +105,7 @@ em uma string, é remover a string como um todo"""
 alphabet = alphabet + "z"
 alphabet = "a" + alphabet
 
+
 #min() -list or String
 print(min("aAbByYzZ"))
 

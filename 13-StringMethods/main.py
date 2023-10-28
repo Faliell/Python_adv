@@ -6,6 +6,7 @@ como resultado – se você não a usar de forma alguma (atribuí-la a uma vari�
 passá-la para uma função/método) ela desaparecerá."""
 
 # ## capitalize()
+print("---capitalize---")
 print("Alpha".capitalize())
 print('ALPHA'.capitalize())
 print(' Alpha'.capitalize())
@@ -13,6 +14,7 @@ print('123'.capitalize())
 print("αβγδ".capitalize())
 
 # ##center():
+print("---center---")
 print('[' + 'alpha'.center(10) + ']')
 print('[' + 'Beta'.center(2) + ']')
 print('[' + 'Beta'.center(4) + ']')
@@ -21,6 +23,7 @@ print('[' + 'Beta'.center(6) + ']')
 print('[' + 'gamma'.center(20, '*') + ']')
 
 # ## endswith() -retorna True/False
+print("---endswith---")
 t = "zeta"
 print(t.endswith("a"))
 print(t.endswith("A"))
@@ -29,6 +32,7 @@ print(t.endswith("eta"))
 
 # ## find() - semelhante ao index(), é mais seguro - não gera erro para um
 # ## argumento que contém uma substring inexistente, retorna -1
+print("---find---")
 t = 'theta'
 print(t.find('eta'))
 print(t.find('et'))
@@ -64,6 +68,7 @@ print('kappa'.find('a', 2, 4))
 
 
 # ## isalnum() - alfa-numerico True/False
+print("---isalnum---")
 print('lambda30'.isalnum())
 print('lambda'.isalnum())
 print('30'.isalnum())
@@ -71,7 +76,7 @@ print('@'.isalnum())
 print('lambda_30'.isalnum())
 print(''.isalnum())
 
-t = 'Six lambdas'
+t = 'Six lambdas' # espaço da false
 print(t.isalnum())
 
 t = '&Alpha;&beta;&Gamma;&delta;'
@@ -82,42 +87,50 @@ print(t.isalnum())
 
 
 # ## isalpha()
+print("---isalpha---")
 print("Moooo".isalpha())
 print('Mu40'.isalpha())
 
 
-# ## isdigit() - apenas numeros
+# ## isdigit() - apenas numeros\
+print("---isdigit---")
 print('2018'.isdigit())
 print('2018.1'.isdigit())
 print("Year2019".isdigit())
 
 
 # ## islower() - é uma variante de isalpha()– aceita apenas letras minúsculas.
+print("---islower---")
 print("Moooo".islower())
-print('moooo'.islower())
+print('moooo1'.islower())
 
 
 # ## isspace()
+print("---isspace---")
 print(' \n '.isspace())
 print(" ".isspace())
 print("mooo mooo mooo".isspace())
 
 
 # ## isupper() - a versão em maiúsculas de islower()
+print("---isupper---")
 print("Moooo".isupper())
 print('moooo'.isupper())
-print('MOOOO'.isupper())
+print('MOOOO1'.isupper())
 
 
 # ## join() - todos os elementos da lista devem ser strings
+print("---join---")
 print(",".join(["omicron", "pi", "rho"]))
 
 
 # ## lower()
+print("---lower---")
 print("SiGmA=60".lower())
 
 
 # ## lstrip() - (left) remove os caracteres especificados do começo da string
+print("---lstrip---")
 print(" tau aa ".lstrip())
 # ## remove todos os caracteres listados em seu argumento, individualmente
 print("www.python.com".lstrip("w."))
@@ -126,6 +139,7 @@ print("gpython.org".lstrip(".org"))
 
 
 # ## replace() - substitui o primeiro argumento pelo segundo
+print("---replace---")
 print("www.netacad.com".replace("netacad.com", "python.org"))
 print("This is it!".replace("is", "are"))
 print("Apple juice".replace("juice", ""))
@@ -136,39 +150,47 @@ print("This is it!".replace("is", "are", 2))
 
 
 # ## rfind() - começa pela direita
+print("---rfind---")
 print("tau tau tau".rfind("ta"))
 print("tau tau tau".rfind("ta", 9))
 print("tau tau tau".rfind("ta", 3, 9))
 
 
 # ## rstrip()
+print("---rstrip---")
 print("[" + " upsilon ".rstrip() + "]")
 print("python.com".rstrip(".com"))
 
 
 # ## split() - cria uma lista, as substrings são delimitadas por espaços em branco
+print("---split---")
 print("phi       chi\npsi".split())
 print("phi,chi,psi".split(","))
 
 
 # ## startswith()
+print("---startswith---")
 print("omega".startswith("meg"))
 print("omega".startswith("om"))
 
 
 # ## strip() - cria uma nova string sem todos os espaços em branco iniciais e finais
+print("---strip---")
 print("[" + "   aleph   ".strip() + "]")
 
 
 # ## swapcase() - caracteres minúsculos tornam-se maiúsculos e vice-versa
+print("---swapcase---")
 print("I know that I know nothing.".swapcase())
 
 
 # ## title()
+print("---title---")
 print("I know that I know nothing. Part 1.".title())
 
 
 # ## upper()
+print("---upper---")
 print("I know that I know nothing. Part 2.".upper())
 
 
