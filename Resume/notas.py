@@ -916,3 +916,12 @@ e que é impressa quando o próprio objeto é impresso.
 # print(ord(" "))  # 32
 # print(chr(97))  # a
 
+
+""" 
+Para ver todas as dependências de um módulo Python instalado, você pode usar
+o comando pip show para exibir informações detalhadas sobre o módulo,
+incluindo suas dependências
+"""
+
+print(__name__)
+
