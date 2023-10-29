@@ -80,8 +80,8 @@ print_exception_tree(BaseException)
 """ Anatomia detalhada das exceções """
 
 """ A classe BaseException apresenta uma propriedade chamada args.
- É uma tupla projetada para reunir todos os argumentos passados para
-  o construtor da classe."""
+É uma tupla projetada para reunir todos os argumentos passados para
+o construtor da classe."""
 
 
 def print_args(args):
@@ -208,5 +208,11 @@ for (pz, ch) in [('calzone', 0), ('margherita', 110), ('mafia', 20)]:
         print(pe, ':', pe.pizza)
 
 
-
+try:
+    x = 10
+    y = "abc"
+    z = x + y
+except TypeError as e:
+    print("Exceção capturada:", e)
+    print("args:", e.args)
 
