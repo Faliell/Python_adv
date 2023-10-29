@@ -45,7 +45,7 @@ print(reciprocal(0))
 """ 
 As exceções são classes
 
-A exceptinstrução é estendida e contém uma frase adicional começando com
+A instrução except é estendida e contém uma frase adicional começando com
 a palavra-chave "as", seguida por um identificador. O identificador foi projetado
 para capturar o objeto de exceção para que você possa analisar sua natureza e
 tirar conclusões adequadas. 

@@ -221,3 +221,4 @@ isspace() – does the string consists only of white spaces?
 isupper() – does the string consists only of upper-case letters?
 startswith() – does the string begin with a given substring?"""
 
+
