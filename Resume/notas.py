@@ -82,7 +82,7 @@ expressao = "x + y"
 resultado = eval(expressao)
 print(resultado)  # Isso imprimirá 15
 
-tem que ser uma expressao:  eval("www") dá errp
+tem que ser uma expressao:  eval("www") dá erro
 """
 
 """
@@ -264,8 +264,7 @@ The scientific notation always returns a float
 Parênteses ()
 Operadores de potenciação **
 Operadores unários + (positivo) e - (negativo)
-Operadores de multiplicação *, divisão /, e divisão inteira //
-Operador de módulo %
+Operadores de multiplicação *, divisão /, e divisão inteira //,módulo %
 Operadores de adição + e subtração -
 Operadores de comparação (por exemplo, <, <=, >, >=, ==, !=)
 Operadores lógicos not, and, or
